@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">anotadorUno</string>
+    <string name="boton_anotador">Anotador</string>
+    <string name="boton_historial">Historial</string>
 </resources>
