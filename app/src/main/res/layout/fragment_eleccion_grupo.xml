@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/icons"
-    tools:context=".MainActivity">
+    tools:context=".EleccionGrupoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -16,15 +16,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/botonAnotadorMainActivity"
+            android:id="@+id/botonCrearGrupoEleccionFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@color/primary_dark"
             android:paddingLeft="20dp"
+
             android:paddingTop="20dp"
             android:paddingRight="20dp"
             android:paddingBottom="20dp"
-            android:text="@string/boton_anotador"
+            android:text="@string/boton_crear_grupo"
             android:textColor="@color/primary_text"
             android:textSize="30sp"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -32,22 +33,42 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/botonHistorialMainActivity"
+            android:id="@+id/botonElegirGrupoEleccionFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:background="@color/primary_dark"
-            android:paddingLeft="25dp"
+            android:paddingLeft="75dp"
             android:paddingTop="20dp"
-            android:paddingRight="25dp"
+            android:paddingRight="75dp"
             android:paddingBottom="20dp"
-            android:text="@string/boton_historial"
+            android:text="@string/boton_eleccion_grupo"
             android:textColor="@color/primary_text"
             android:textSize="30sp"
             app:cornerRadius="10dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/botonAnotadorMainActivity" />
+            app:layout_constraintTop_toBottomOf="@id/botonCrearGrupoEleccionFragment" />
+
+        <Button
+            android:id="@+id/botonAmistosoEleccionFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/primary_dark"
+            android:paddingLeft="100dp"
+            android:paddingTop="20dp"
+            android:paddingRight="100dp"
+            android:paddingBottom="20dp"
+            android:text="@string/boton_amistoso"
+            android:textColor="@color/primary_text"
+            android:textSize="30sp"
+            app:cornerRadius="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/botonElegirGrupoEleccionFragment" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

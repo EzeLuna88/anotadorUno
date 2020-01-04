@@ -1,5 +1,22 @@
 <resources>
-    <string name="app_name">anotadorUno</string>
+    <string name="app_name">Anotador UNO</string>
     <string name="boton_anotador">Anotador</string>
     <string name="boton_historial">Historial</string>
+    <string name="boton_eleccion_grupo">Elegir Grupo</string>
+    <string name="boton_crear_grupo">Crear Nuevo Grupo</string>
+    <string name="boton_amistoso">Amistoso</string>
+    <string name="jugador_uno">Jugador Nro 1: </string>
+    <string name="jugador_dos">Jugador Nro 2: </string>
+    <string name="jugador_tres">Jugador Nro 3: </string>
+    <string name="jugador_cuatro">Jugador Nro 4: </string>
+    <string name="jugador_cinco">Jugador Nro 5: </string>
+    <string name="jugador_seis">Jugador Nro 6: </string>
+    <string name="jugador_siete">Jugador Nro 7: </string>
+    <string name="jugador_ocho">Jugador Nro 8: </string>
+    <string name="jugador_nueve">Jugador Nro 9: </string>
+    <string name="jugador_diez">Jugador Nro 10: </string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
