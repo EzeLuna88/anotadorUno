@@ -29,6 +29,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextJugadorUno"
                     android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_uno"
@@ -52,6 +53,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorDos"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_dos"
                     android:textColor="@color/primary_text"
@@ -76,6 +78,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
                     android:layout_height="wrap_content"
+                    android:id="@+id/editTextJugadorTres"
                     android:hint="@string/jugador_tres"
                     android:textColor="@color/primary_text"
                     android:textColorHint="@color/primary_text"
@@ -98,6 +101,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorCuatro"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_cuatro"
                     android:textColor="@color/primary_text"
@@ -121,6 +125,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorCinco"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_cinco"
                     android:textColor="@color/primary_text"
@@ -144,6 +149,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorSeis"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_seis"
                     android:textColor="@color/primary_text"
@@ -167,6 +173,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorSiete"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_siete"
                     android:textColor="@color/primary_text"
@@ -190,6 +197,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorOcho"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_ocho"
                     android:textColor="@color/primary_text"
@@ -213,6 +221,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorNueve"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_nueve"
                     android:textColor="@color/primary_text"
@@ -236,6 +245,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="380dp"
+                    android:id="@+id/editTextJugadorDiez"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_diez"
                     android:textColor="@color/primary_text"
