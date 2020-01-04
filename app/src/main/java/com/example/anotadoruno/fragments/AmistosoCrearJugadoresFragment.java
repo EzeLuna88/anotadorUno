@@ -4,6 +4,8 @@ package com.example.anotadoruno.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -104,7 +106,6 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
         setVisibilityJugador(editTextJugadorNueve, jugadorDiez);
 
 
-
         nombreJugadorCuatro = editTextJugadorCuatro.getText().toString();
         nombreJugadorCinco = editTextJugadorCinco.getText().toString();
         nombreJugadorSeis = editTextJugadorSeis.getText().toString();
@@ -121,8 +122,12 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                 if (nombreJugadorUno.matches("") || nombreJugadorDos.matches("")) {
                     Toast.makeText(getContext(), "La partida necesita minimo dos jugadores", Toast.LENGTH_SHORT).show();
                 } else {
-                    nombreJugadorTres = editTextJugadorTres.getText().toString();
-                    if (nombreJugadorTres.matches("")){
+                    nombreJugadorOcho = editTextJugadorOcho.getText().toString();
+                    if (nombreJugadorOcho.matches("")) {
+                        SevenMatchFragment sevenMatchFragment = new SevenMatchFragment();
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                        fragmentTransaction.replace(R.id.contenedorDeFragment, sevenMatchFragment).commit();
 
                     }
                 }

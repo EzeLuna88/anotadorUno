@@ -12,6 +12,206 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/jugadorUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador uno"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutUno"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorUno" />
+
+        <EditText
+            android:id="@+id/partidaUnaUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutUno" />
+
+        <EditText
+            android:id="@+id/partidaDosUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaUnaUno" />
+
+        <EditText
+            android:id="@+id/partidaTresUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDosUno" />
+
+        <EditText
+            android:id="@+id/partidaCuatroUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaTresUno" />
+
+        <EditText
+            android:id="@+id/partidaCincoUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCuatroUno" />
+
+        <EditText
+            android:id="@+id/partidaSeisUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCincoUno" />
+
+        <EditText
+            android:id="@+id/partidaSieteUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaSeisUno" />
+
+
+        <EditText
+            android:id="@+id/partidaOchoUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaSieteUno" />
+
+        <EditText
+            android:id="@+id/partidaNueveUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaOchoUno" />
+
+        <EditText
+            android:id="@+id/partidaDiezUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaNueveUno" />
+
+        <EditText
+            android:id="@+id/partidaOnceUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiezUno" />
+
+        <EditText
+            android:id="@+id/partidaDoceUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaOnceUno" />
+
+        <EditText
+            android:id="@+id/partidaTreceUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDoceUno" />
+
+        <EditText
+            android:id="@+id/partidaCatorceUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaTreceUno" />
+
+        <EditText
+            android:id="@+id/partidaQuinceUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCatorceUno" />
+
+        <EditText
+            android:id="@+id/partidaDieciseisUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaQuinceUno" />
+
+        <EditText
+            android:id="@+id/partidaDiecisieteUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDieciseisUno" />
+
+        <EditText
+            android:id="@+id/partidaDieciochoUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiecisieteUno" />
+
+        <EditText
+            android:id="@+id/partidaDiecinueveUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDieciochoUno" />
+
+        <EditText
+            android:id="@+id/partidaVeinteUno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiecinueveUno" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,6 +219,207 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/jugadorDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador dos"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDos"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorDos" />
+
+        <EditText
+            android:id="@+id/partidaUnoDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutDos" />
+
+        <EditText
+            android:id="@+id/partidaDosDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaUnoDos" />
+
+        <EditText
+            android:id="@+id/partidaTresDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDosDos" />
+
+        <EditText
+            android:id="@+id/partidaCuatroDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaTresDos" />
+
+        <EditText
+            android:id="@+id/partidaCincoDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCuatroDos" />
+
+        <EditText
+            android:id="@+id/partidaSeisDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCincoDos" />
+
+        <EditText
+            android:id="@+id/partidaSieteDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaSeisDos" />
+
+
+        <EditText
+            android:id="@+id/partidaOchoDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaSieteDos" />
+
+        <EditText
+            android:id="@+id/partidaNueveDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaOchoDos" />
+
+        <EditText
+            android:id="@+id/partidaDiezDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaNueveDos" />
+
+        <EditText
+            android:id="@+id/partidaOnceDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiezDos" />
+
+        <EditText
+            android:id="@+id/partidaDoceDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaOnceDos" />
+
+        <EditText
+            android:id="@+id/partidaTreceDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDoceDos" />
+
+        <EditText
+            android:id="@+id/partidaCatorceDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaTreceDos" />
+
+        <EditText
+            android:id="@+id/partidaQuinceDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCatorceDos" />
+
+        <EditText
+            android:id="@+id/partidaDieciseisDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaQuinceDos" />
+
+        <EditText
+            android:id="@+id/partidaDiecisieteDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDieciseisDos" />
+
+        <EditText
+            android:id="@+id/partidaDieciochoDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiecisieteDos" />
+
+        <EditText
+            android:id="@+id/partidaDiecinueveDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDieciochoDos" />
+
+        <EditText
+            android:id="@+id/partidaVeinteDos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiecinueveDos" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,6 +427,208 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/jugadorTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador tres"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTres"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorTres" />
+
+        <EditText
+            android:id="@+id/partidaUnoTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutTres" />
+
+        <EditText
+            android:id="@+id/partidaDosTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaUnoTres" />
+
+        <EditText
+            android:id="@+id/partidaTresTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDosTres" />
+
+        <EditText
+            android:id="@+id/partidaCuatroTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaTresTres" />
+
+        <EditText
+            android:id="@+id/partidaCincoTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCuatroTres" />
+
+        <EditText
+            android:id="@+id/partidaSeisTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCincoTres" />
+
+        <EditText
+            android:id="@+id/partidaSieteTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaSeisTres" />
+
+
+        <EditText
+            android:id="@+id/partidaOchoTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaSieteTres" />
+
+        <EditText
+            android:id="@+id/partidaNueveTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaOchoTres" />
+
+        <EditText
+            android:id="@+id/partidaDiezTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaNueveTres" />
+
+        <EditText
+            android:id="@+id/partidaOnceTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiezTres" />
+
+        <EditText
+            android:id="@+id/partidaDoceTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaOnceTres" />
+
+        <EditText
+            android:id="@+id/partidaTreceTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDoceTres" />
+
+        <EditText
+            android:id="@+id/partidaCatorceTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaTreceTres" />
+
+        <EditText
+            android:id="@+id/partidaQuinceTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaCatorceTres" />
+
+        <EditText
+            android:id="@+id/partidaDieciseisTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaQuinceTres" />
+
+        <EditText
+            android:id="@+id/partidaDiecisieteTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDieciseisTres" />
+
+        <EditText
+            android:id="@+id/partidaDieciochoTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiecisieteTres" />
+
+        <EditText
+            android:id="@+id/partidaDiecinueveTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDieciochoTres" />
+
+        <EditText
+            android:id="@+id/partidaVeinteTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/partidaDiecinueveTres" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -33,6 +636,34 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/jugadorCuatro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador cuatro"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCuatro"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorCuatro" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutCuatro" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,6 +671,34 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/jugadorCinco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador cinco"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCinco"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorCinco" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutCinco" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,12 +706,68 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <TextView
+            android:id="@+id/jugadorSeis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador seis"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSeis"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorSeis" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutSeis" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/jugadorSiete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="jugador siete"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSiete"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/secondary_text"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/jugadorSiete" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primary_text"
+            android:gravity="center"
+            android:textColor="@color/primary_text"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutSiete" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
