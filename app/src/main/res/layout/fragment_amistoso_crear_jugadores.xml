@@ -8,12 +8,15 @@
     tools:context=".fragments.AmistosoCrearJugadoresFragment">
 
     <ScrollView
-        android:layout_width="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -52,8 +55,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorUno">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorDos"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_dos"
                     android:textColor="@color/primary_text"
@@ -76,9 +79,9 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorDos">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextJugadorTres"
                     android:layout_width="380dp"
                     android:layout_height="wrap_content"
-                    android:id="@+id/editTextJugadorTres"
                     android:hint="@string/jugador_tres"
                     android:textColor="@color/primary_text"
                     android:textColorHint="@color/primary_text"
@@ -100,8 +103,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorTres">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorCuatro"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_cuatro"
                     android:textColor="@color/primary_text"
@@ -124,8 +127,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorCuatro">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorCinco"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_cinco"
                     android:textColor="@color/primary_text"
@@ -148,8 +151,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorCinco">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorSeis"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_seis"
                     android:textColor="@color/primary_text"
@@ -172,8 +175,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorSeis">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorSiete"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_siete"
                     android:textColor="@color/primary_text"
@@ -196,8 +199,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorSiete">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorOcho"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_ocho"
                     android:textColor="@color/primary_text"
@@ -220,8 +223,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorOcho">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorNueve"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_nueve"
                     android:textColor="@color/primary_text"
@@ -244,8 +247,8 @@
                 app:layout_constraintTop_toBottomOf="@id/jugadorNueve">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="380dp"
                     android:id="@+id/editTextJugadorDiez"
+                    android:layout_width="380dp"
                     android:layout_height="wrap_content"
                     android:hint="@string/jugador_diez"
                     android:textColor="@color/primary_text"
@@ -256,4 +259,21 @@
             </com.google.android.material.textfield.TextInputLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/botonEmpezarPartida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/primary"
+        android:text="@string/empezar_partida"
+        android:textColor="@color/primary_text"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+         />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
