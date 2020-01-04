@@ -7,162 +7,243 @@
     android:background="@color/icons"
     tools:context=".fragments.AmistosoCrearJugadoresFragment">
 
-    <TextView
-        android:id="@+id/textViewJugadorUno"
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_uno"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:ignore="MissingConstraints">
 
-    <EditText
-        android:layout_marginTop="10dp"
-        android:id="@+id/editTextJugadorUno"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:backgroundTint="@color/primary_text"
-        android:textColor="@color/primary_text"
-        android:textSize="10dp"
-        android:textStyle="normal"
-        app:layout_constraintLeft_toRightOf="@id/textViewJugadorUno"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <EditText
-        android:layout_marginTop="10dp"
-        android:id="@+id/editTextJugadorDos"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:backgroundTint="@color/primary_text"
-        android:textColor="@color/primary_text"
-        android:textSize="10dp"
-        android:textStyle="normal"
-        app:layout_constraintLeft_toRightOf="@id/textViewJugadorDos"
-        app:layout_constraintTop_toBottomOf="@id/editTextJugadorUno" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorUno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_uno"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewJugadorDos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_dos"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorUno" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textViewJugadorTres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_tres"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorDos" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorDos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorUno">
 
-    <TextView
-        android:id="@+id/textViewJugadorCuatro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_cuatro"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorTres" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_dos"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewJugadorCinco"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_cinco"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorCuatro" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textViewJugadorSeis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_seis"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorCinco" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorTres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorDos">
 
-    <TextView
-        android:id="@+id/textViewJugadorSiete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_siete"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorSeis" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_tres"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/textViewJugadorOcho"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_ocho"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorSiete" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/textViewJugadorNueve"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_nueve"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorOcho" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorCuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorTres">
 
-    <TextView
-        android:id="@+id/textViewJugadorDiez"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/jugador_diez"
-        android:textColor="@color/primary_text"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewJugadorNueve" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_cuatro"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
 
+            </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorCinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorCuatro">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_cinco"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorSeis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorCinco">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_seis"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorSiete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorSeis">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_siete"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorOcho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorSiete">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_ocho"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorNueve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorOcho">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_nueve"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/jugadorDiez"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/primary_text"
+                android:textColorHint="@color/primary_text"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/jugadorNueve">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/jugador_diez"
+                    android:textColor="@color/primary_text"
+                    android:textColorHint="@color/primary_text"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
