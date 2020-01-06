@@ -179,7 +179,7 @@ public class SevenMatchFragment extends Fragment {
                         TextUtils.isEmpty(partidaDosSiete.getText().toString())) {
                     Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
                 } else {
-                    puntajeJugadorUno = Integer.parseInt(partidaDosUno.getText().toString());
+                    puntajeJugadorUno = puntajeJugadorUno + Integer.parseInt(partidaDosUno.getText().toString());
                     puntajeJugadorDos = Integer.parseInt(partidaDosDos.getText().toString());
                     puntajeJugadorTres = Integer.parseInt(partidaDosTres.getText().toString());
                     puntajeJugadorCuatro = Integer.parseInt(partidaDosCuatro.getText().toString());
@@ -188,6 +188,11 @@ public class SevenMatchFragment extends Fragment {
                     puntajeJugadorSiete = Integer.parseInt(partidaDosSiete.getText().toString());
                     setFreeze(partidaDosUno);
                     setFreeze(partidaDosDos);
+                    setFreeze(partidaDosTres);
+                    setFreeze(partidaDosCuatro);
+                    setFreeze(partidaDosCinco);
+                    setFreeze(partidaDosSeis);
+                    setFreeze(partidaDosSiete);
                     rondaTres.setVisibility(View.VISIBLE);
                 }
             }
