@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -87,6 +88,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
     private String nombreJugadorOcho;
     private String nombreJugadorNueve;
     private String nombreJugadorDiez;
+    @BindView(R.id.editTextLimiteDePuntos)
+    EditText editTextLimiteDePuntos;
+    private Integer limiteDePuntos;
 
     public AmistosoCrearJugadoresFragment() {
         // Required empty public constructor
@@ -112,6 +116,24 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
         setEditTextJugadorOcho();
         setEditTextJugadorNueve();
         setEditTextJugadorDiez();
+
+        editTextLimiteDePuntos.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                String value = editTextLimiteDePuntos.getText().toString();
+                limiteDePuntos = Integer.parseInt(value);
+            }
+        });
 
 
         botonEmpezarPartida.setOnClickListener(new View.OnClickListener() {
@@ -186,6 +208,7 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                             args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_CINCO, nombreJugadorCinco);
                             args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_SEIS, nombreJugadorSeis);
                             args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_SIETE, nombreJugadorSiete);
+                            args.putSerializable(SevenMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             SevenMatchFragment sevenMatchFragment = new SevenMatchFragment();
                             sevenMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
