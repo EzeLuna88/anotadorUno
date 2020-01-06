@@ -122,6 +122,8 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                         if (nombreJugadorUno == null || nombreJugadorDos == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
                         } else {
+
+
                             TwoMatchFragment twoMatchFragment = new TwoMatchFragment();
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -176,7 +178,16 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 || nombreJugadorSeis == null || nombreJugadorSiete == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
                         } else {
+                            Bundle args = new Bundle();
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_TRES, nombreJugadorTres);
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_CUATRO, nombreJugadorCuatro);
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_CINCO, nombreJugadorCinco);
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_SEIS, nombreJugadorSeis);
+                            args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_SIETE, nombreJugadorSiete);
                             SevenMatchFragment sevenMatchFragment = new SevenMatchFragment();
+                            sevenMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, sevenMatchFragment).commit();
@@ -549,6 +560,10 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
 
             }
         });
+    }
+
+    public interface NotificadorBotonEmpezarPartida {
+        public void hicieronClickBotonEmpezarPartida();
     }
 
 }

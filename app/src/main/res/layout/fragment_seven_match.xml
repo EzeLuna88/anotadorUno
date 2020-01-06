@@ -13,7 +13,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorUno"
+            android:id="@+id/textViewJugadorUnoSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -220,7 +220,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorDos"
+            android:id="@+id/textViewJugadorDosSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -428,7 +428,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorTres"
+            android:id="@+id/textViewJugadorTresSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -637,7 +637,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorCuatro"
+            android:id="@+id/textViewJugadorCuatroSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -846,7 +846,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorCinco"
+            android:id="@+id/textViewJugadorCincoSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -1055,7 +1055,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorSeis"
+            android:id="@+id/textViewJugadorSeisSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -1264,7 +1264,7 @@
         android:layout_weight="1">
 
         <TextView
-            android:id="@+id/jugadorSiete"
+            android:id="@+id/textViewJugadorSieteSevenMatch"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

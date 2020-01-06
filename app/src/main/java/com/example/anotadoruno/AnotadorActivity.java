@@ -9,7 +9,7 @@ import android.os.Bundle;
 import com.example.anotadoruno.fragments.AmistosoCrearJugadoresFragment;
 import com.example.anotadoruno.fragments.GrupoOAmistosoFragment;
 
-public class AnotadorActivity extends AppCompatActivity implements GrupoOAmistosoFragment.NotificadorBotonAmistoso {
+public class AnotadorActivity extends AppCompatActivity implements GrupoOAmistosoFragment.NotificadorBotonAmistoso, AmistosoCrearJugadoresFragment.NotificadorBotonEmpezarPartida {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,11 @@ public class AnotadorActivity extends AppCompatActivity implements GrupoOAmistos
     FragmentManager fragmentManager = getSupportFragmentManager();
     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
     fragmentTransaction.replace(R.id.contenedorDeFragment, amistosoCrearJugadoresFragment).commit();
+
+    }
+
+    @Override
+    public void hicieronClickBotonEmpezarPartida() {
 
     }
 }
