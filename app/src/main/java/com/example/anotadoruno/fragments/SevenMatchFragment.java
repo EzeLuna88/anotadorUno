@@ -2,6 +2,7 @@ package com.example.anotadoruno.fragments;
 
 
 import android.graphics.Color;
+import android.opengl.Visibility;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -37,6 +38,8 @@ public class SevenMatchFragment extends Fragment {
     public static final String NOMBRE_JUGADOR_SIETE = "jugador siete";
     public static final String LIMITE_DE_PUNTOS = "limite de puntos";
 
+    @BindView(R.id.rondaUno)
+    LinearLayout rondaUno;
     @BindView(R.id.rondaDos)
     LinearLayout rondaDos;
     @BindView(R.id.rondaTres)
@@ -91,6 +94,22 @@ public class SevenMatchFragment extends Fragment {
     @BindView(R.id.textViewJugadorSieteSevenMatch)
     TextView textViewJugadorSieteSevenMatch;
 
+    @BindView(R.id.textViewPuntajeJugadorUno)
+    TextView textViewPuntajeJugadorUno;
+    @BindView(R.id.textViewPuntajeJugadorDos)
+    TextView textViewPuntajeJugadorDos;
+    @BindView(R.id.textViewPuntajeJugadorTres)
+    TextView textViewPuntajeJugadorTres;
+    @BindView(R.id.textViewPuntajeJugadorCuatro)
+    TextView textViewPuntajeJugadorCuatro;
+    @BindView(R.id.textViewPuntajeJugadorCinco)
+    TextView textViewPuntajeJugadorCinco;
+    @BindView(R.id.textViewPuntajeJugadorSeis)
+    TextView TextViewPuntajeJugadorSeis;
+    @BindView(R.id.textViewPuntajeJugadorSiete)
+    TextView textViewPuntajeJugadorSiete;
+
+
     private String jugadorUnoSevenMatch;
     private String jugadorDosSevenMatch;
     private String jugadorTresSevenMatch;
@@ -109,6 +128,8 @@ public class SevenMatchFragment extends Fragment {
     private Integer puntajeJugadorSeis = 0;
     private Integer puntajeJugadorSiete = 0;
 
+    private Integer contadorDeRonda = 1;
+
 
     public SevenMatchFragment() {
         // Required empty public constructor
@@ -122,6 +143,7 @@ public class SevenMatchFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_seven_match, container, false);
         ButterKnife.bind(this, view);
         Bundle bundle = getArguments();
+
 
         jugadorUnoSevenMatch = (String) bundle.getSerializable(NOMBRE_JUGADOR_UNO);
         jugadorDosSevenMatch = (String) bundle.getSerializable(NOMBRE_JUGADOR_DOS);
@@ -141,65 +163,77 @@ public class SevenMatchFragment extends Fragment {
         textViewJugadorSeisSevenMatch.setText(jugadorSeisSevenMatch);
         textViewJugadorSieteSevenMatch.setText(jugadorSieteSevenMatch);
 
-
         buttonSiguienteRondaSevenMatch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (TextUtils.isEmpty(partidaUnoUno.getText().toString()) ||
-                        TextUtils.isEmpty(partidaUnoDos.getText().toString()) ||
-                        TextUtils.isEmpty(partidaUnoTres.getText().toString()) ||
-                        TextUtils.isEmpty(partidaUnoCuatro.getText().toString()) ||
-                        TextUtils.isEmpty(partidaUnoCinco.getText().toString()) ||
-                        TextUtils.isEmpty(partidaUnoSeis.getText().toString()) ||
-                        TextUtils.isEmpty(partidaUnoSiete.getText().toString())) {
-                    Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
-                } else {
-                    puntajeJugadorUno = Integer.parseInt(partidaUnoUno.getText().toString());
-                    puntajeJugadorDos = Integer.parseInt(partidaUnoDos.getText().toString());
-                    puntajeJugadorTres = Integer.parseInt(partidaUnoTres.getText().toString());
-                    puntajeJugadorCuatro = Integer.parseInt(partidaUnoCuatro.getText().toString());
-                    puntajeJugadorCinco = Integer.parseInt(partidaUnoCinco.getText().toString());
-                    puntajeJugadorSeis = Integer.parseInt(partidaUnoSeis.getText().toString());
-                    puntajeJugadorSiete = Integer.parseInt(partidaUnoSiete.getText().toString());
-                    setFreeze(partidaUnoUno);
-                    setFreeze(partidaUnoDos);
-                    setFreeze(partidaUnoTres);
-                    setFreeze(partidaUnoCuatro);
-                    setFreeze(partidaUnoCinco);
-                    setFreeze(partidaUnoSeis);
-                    setFreeze(partidaUnoSiete);
-                    rondaDos.setVisibility(View.VISIBLE);
-                }
-                if (TextUtils.isEmpty(partidaDosUno.getText().toString()) ||
-                        TextUtils.isEmpty(partidaDosDos.getText().toString()) ||
-                        TextUtils.isEmpty(partidaDosTres.getText().toString()) ||
-                        TextUtils.isEmpty(partidaDosCuatro.getText().toString()) ||
-                        TextUtils.isEmpty(partidaDosCinco.getText().toString()) ||
-                        TextUtils.isEmpty(partidaDosSeis.getText().toString()) ||
-                        TextUtils.isEmpty(partidaDosSiete.getText().toString())) {
-                    Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
-                } else {
-                    puntajeJugadorUno = puntajeJugadorUno + Integer.parseInt(partidaDosUno.getText().toString());
-                    puntajeJugadorDos = Integer.parseInt(partidaDosDos.getText().toString());
-                    puntajeJugadorTres = Integer.parseInt(partidaDosTres.getText().toString());
-                    puntajeJugadorCuatro = Integer.parseInt(partidaDosCuatro.getText().toString());
-                    puntajeJugadorCinco = Integer.parseInt(partidaDosCinco.getText().toString());
-                    puntajeJugadorSeis = Integer.parseInt(partidaDosSeis.getText().toString());
-                    puntajeJugadorSiete = Integer.parseInt(partidaDosSiete.getText().toString());
-                    setFreeze(partidaDosUno);
-                    setFreeze(partidaDosDos);
-                    setFreeze(partidaDosTres);
-                    setFreeze(partidaDosCuatro);
-                    setFreeze(partidaDosCinco);
-                    setFreeze(partidaDosSeis);
-                    setFreeze(partidaDosSiete);
-                    rondaTres.setVisibility(View.VISIBLE);
+                switch (contadorDeRonda) {
+                    case 1:
+                        if (TextUtils.isEmpty(partidaUnoUno.getText().toString()) ||
+                                TextUtils.isEmpty(partidaUnoDos.getText().toString()) ||
+                                TextUtils.isEmpty(partidaUnoTres.getText().toString()) ||
+                                TextUtils.isEmpty(partidaUnoCuatro.getText().toString()) ||
+                                TextUtils.isEmpty(partidaUnoCinco.getText().toString()) ||
+                                TextUtils.isEmpty(partidaUnoSeis.getText().toString()) ||
+                                TextUtils.isEmpty(partidaUnoSiete.getText().toString())) {
+                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = Integer.parseInt(partidaUnoUno.getText().toString());
+                            puntajeJugadorDos = Integer.parseInt(partidaUnoDos.getText().toString());
+                            puntajeJugadorTres = Integer.parseInt(partidaUnoTres.getText().toString());
+                            puntajeJugadorCuatro = Integer.parseInt(partidaUnoCuatro.getText().toString());
+                            puntajeJugadorCinco = Integer.parseInt(partidaUnoCinco.getText().toString());
+                            puntajeJugadorSeis = Integer.parseInt(partidaUnoSeis.getText().toString());
+                            puntajeJugadorSiete = Integer.parseInt(partidaUnoSiete.getText().toString());
+                            setFreeze(partidaUnoUno);
+                            setFreeze(partidaUnoDos);
+                            setFreeze(partidaUnoTres);
+                            setFreeze(partidaUnoCuatro);
+                            setFreeze(partidaUnoCinco);
+                            setFreeze(partidaUnoSeis);
+                            setFreeze(partidaUnoSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDos.setVisibility(View.VISIBLE);
+                            textViewPuntajeJugadorUno.setText(String.valueOf(puntajeJugadorUno));
+                        }
+                        break;
+                    case 2:
+                        if (TextUtils.isEmpty(partidaDosUno.getText().toString()) ||
+                                TextUtils.isEmpty(partidaDosDos.getText().toString()) ||
+                                TextUtils.isEmpty(partidaDosTres.getText().toString()) ||
+                                TextUtils.isEmpty(partidaDosCuatro.getText().toString()) ||
+                                TextUtils.isEmpty(partidaDosCinco.getText().toString()) ||
+                                TextUtils.isEmpty(partidaDosSeis.getText().toString()) ||
+                                TextUtils.isEmpty(partidaDosSiete.getText().toString())) {
+                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                        } else {
+                            sumaDePuntaje(puntajeJugadorUno, partidaDosUno);
+                            sumaDePuntaje(puntajeJugadorDos, partidaDosDos);
+                            sumaDePuntaje(puntajeJugadorTres, partidaDosTres);
+                            sumaDePuntaje(puntajeJugadorCuatro, partidaDosCuatro);
+                            sumaDePuntaje(puntajeJugadorCinco, partidaDosCinco);
+                            sumaDePuntaje(puntajeJugadorSeis, partidaDosSeis);
+                            sumaDePuntaje(puntajeJugadorSiete, partidaDosSiete);
+                            setFreeze(partidaDosUno);
+                            setFreeze(partidaDosDos);
+                            setFreeze(partidaDosTres);
+                            setFreeze(partidaDosCuatro);
+                            setFreeze(partidaDosCinco);
+                            setFreeze(partidaDosSeis);
+                            setFreeze(partidaDosSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaTres.setVisibility(View.VISIBLE);
+                        }
+                        break;
                 }
             }
         });
 
-
         return view;
+
+    }
+
+    private void sumaDePuntaje(Integer puntajeJugador, EditText partida) {
+        puntajeJugador = puntajeJugador + Integer.parseInt(partida.getText().toString());
     }
 
     private void setFreeze(EditText partidaUnoUno) {
