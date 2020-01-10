@@ -105,7 +105,7 @@ public class SevenMatchFragment extends Fragment {
     @BindView(R.id.textViewPuntajeJugadorCinco)
     TextView textViewPuntajeJugadorCinco;
     @BindView(R.id.textViewPuntajeJugadorSeis)
-    TextView TextViewPuntajeJugadorSeis;
+    TextView textViewPuntajeJugadorSeis;
     @BindView(R.id.textViewPuntajeJugadorSiete)
     TextView textViewPuntajeJugadorSiete;
 
@@ -168,60 +168,39 @@ public class SevenMatchFragment extends Fragment {
             public void onClick(View view) {
                 switch (contadorDeRonda) {
                     case 1:
-                        if (TextUtils.isEmpty(partidaUnoUno.getText().toString()) ||
-                                TextUtils.isEmpty(partidaUnoDos.getText().toString()) ||
-                                TextUtils.isEmpty(partidaUnoTres.getText().toString()) ||
-                                TextUtils.isEmpty(partidaUnoCuatro.getText().toString()) ||
-                                TextUtils.isEmpty(partidaUnoCinco.getText().toString()) ||
-                                TextUtils.isEmpty(partidaUnoSeis.getText().toString()) ||
-                                TextUtils.isEmpty(partidaUnoSiete.getText().toString())) {
+                        if (checkEmptyNumbers(partidaUnoUno, partidaUnoDos, partidaUnoTres, partidaUnoCuatro, partidaUnoCinco,
+                                partidaUnoSeis, partidaUnoSiete)) {
                             Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = Integer.parseInt(partidaUnoUno.getText().toString());
-                            puntajeJugadorDos = Integer.parseInt(partidaUnoDos.getText().toString());
-                            puntajeJugadorTres = Integer.parseInt(partidaUnoTres.getText().toString());
-                            puntajeJugadorCuatro = Integer.parseInt(partidaUnoCuatro.getText().toString());
-                            puntajeJugadorCinco = Integer.parseInt(partidaUnoCinco.getText().toString());
-                            puntajeJugadorSeis = Integer.parseInt(partidaUnoSeis.getText().toString());
-                            puntajeJugadorSiete = Integer.parseInt(partidaUnoSiete.getText().toString());
-                            setFreeze(partidaUnoUno);
-                            setFreeze(partidaUnoDos);
-                            setFreeze(partidaUnoTres);
-                            setFreeze(partidaUnoCuatro);
-                            setFreeze(partidaUnoCinco);
-                            setFreeze(partidaUnoSeis);
-                            setFreeze(partidaUnoSiete);
+                            puntajeJugadorUno = getNumeroParcial(partidaUnoUno);
+                            puntajeJugadorDos = getNumeroParcial(partidaUnoDos);
+                            puntajeJugadorTres = getNumeroParcial(partidaUnoTres);
+                            puntajeJugadorCuatro = getNumeroParcial(partidaUnoCuatro);
+                            puntajeJugadorCinco = getNumeroParcial(partidaUnoCinco);
+                            puntajeJugadorSeis = getNumeroParcial(partidaUnoSeis);
+                            puntajeJugadorSiete = getNumeroParcial(partidaUnoSiete);
+                            setFreezeRonda(partidaUnoUno, partidaUnoDos, partidaUnoTres, partidaUnoCuatro, partidaUnoCinco, partidaUnoSeis, partidaUnoSiete);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDos.setVisibility(View.VISIBLE);
-                            textViewPuntajeJugadorUno.setText(String.valueOf(puntajeJugadorUno));
+                            actualizarPuntajes();
                         }
                         break;
                     case 2:
-                        if (TextUtils.isEmpty(partidaDosUno.getText().toString()) ||
-                                TextUtils.isEmpty(partidaDosDos.getText().toString()) ||
-                                TextUtils.isEmpty(partidaDosTres.getText().toString()) ||
-                                TextUtils.isEmpty(partidaDosCuatro.getText().toString()) ||
-                                TextUtils.isEmpty(partidaDosCinco.getText().toString()) ||
-                                TextUtils.isEmpty(partidaDosSeis.getText().toString()) ||
-                                TextUtils.isEmpty(partidaDosSiete.getText().toString())) {
+                        if (checkEmptyNumbers(partidaDosUno, partidaDosDos, partidaDosTres, partidaDosCuatro, partidaDosCinco,
+                                partidaDosSeis, partidaDosSiete)) {
                             Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
                         } else {
-                            sumaDePuntaje(puntajeJugadorUno, partidaDosUno);
-                            sumaDePuntaje(puntajeJugadorDos, partidaDosDos);
-                            sumaDePuntaje(puntajeJugadorTres, partidaDosTres);
-                            sumaDePuntaje(puntajeJugadorCuatro, partidaDosCuatro);
-                            sumaDePuntaje(puntajeJugadorCinco, partidaDosCinco);
-                            sumaDePuntaje(puntajeJugadorSeis, partidaDosSeis);
-                            sumaDePuntaje(puntajeJugadorSiete, partidaDosSiete);
-                            setFreeze(partidaDosUno);
-                            setFreeze(partidaDosDos);
-                            setFreeze(partidaDosTres);
-                            setFreeze(partidaDosCuatro);
-                            setFreeze(partidaDosCinco);
-                            setFreeze(partidaDosSeis);
-                            setFreeze(partidaDosSiete);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDosTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDosCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDosCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDosSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDosSiete);
+                            setFreezeRonda(partidaDosUno, partidaDosDos, partidaDosTres, partidaDosCuatro, partidaDosCinco, partidaDosSeis, partidaDosSiete);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaTres.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
                         }
                         break;
                 }
@@ -232,9 +211,42 @@ public class SevenMatchFragment extends Fragment {
 
     }
 
-    private void sumaDePuntaje(Integer puntajeJugador, EditText partida) {
-        puntajeJugador = puntajeJugador + Integer.parseInt(partida.getText().toString());
+    private void setFreezeRonda(EditText partidaDosUno, EditText partidaDosDos, EditText partidaDosTres, EditText partidaDosCuatro, EditText partidaDosCinco, EditText partidaDosSeis, EditText partidaDosSiete) {
+        setFreeze(partidaDosUno);
+        setFreeze(partidaDosDos);
+        setFreeze(partidaDosTres);
+        setFreeze(partidaDosCuatro);
+        setFreeze(partidaDosCinco);
+        setFreeze(partidaDosSeis);
+        setFreeze(partidaDosSiete);
     }
+
+    private int getNumeroParcial(EditText partidaDosUno) {
+        return Integer.parseInt(partidaDosUno.getText().toString());
+    }
+
+    private void actualizarPuntajes() {
+        textViewPuntajeJugadorUno.setText(String.valueOf(puntajeJugadorUno));
+        textViewPuntajeJugadorDos.setText(String.valueOf(puntajeJugadorDos));
+        textViewPuntajeJugadorTres.setText(String.valueOf(puntajeJugadorTres));
+        textViewPuntajeJugadorCuatro.setText(String.valueOf(puntajeJugadorCuatro));
+        textViewPuntajeJugadorCinco.setText(String.valueOf(puntajeJugadorCinco));
+        textViewPuntajeJugadorSeis.setText(String.valueOf(puntajeJugadorSeis));
+        textViewPuntajeJugadorSiete.setText(String.valueOf(puntajeJugadorSiete));
+    }
+
+    private boolean checkEmptyNumbers(EditText jugadorUno, EditText jugadorDos, EditText jugadorTres, EditText jugadorCuatro,
+                                      EditText jugadorCinco, EditText jugadorSeis, EditText jugadorSiete) {
+        return TextUtils.isEmpty(jugadorUno.getText().toString()) ||
+                TextUtils.isEmpty(jugadorDos.getText().toString()) ||
+                TextUtils.isEmpty(jugadorTres.getText().toString()) ||
+                TextUtils.isEmpty(jugadorCuatro.getText().toString()) ||
+                TextUtils.isEmpty(jugadorCinco.getText().toString()) ||
+                TextUtils.isEmpty(jugadorSeis.getText().toString()) ||
+                TextUtils.isEmpty(jugadorSiete.getText().toString());
+    }
+
+
 
     private void setFreeze(EditText partidaUnoUno) {
         partidaUnoUno.setEnabled(false);
