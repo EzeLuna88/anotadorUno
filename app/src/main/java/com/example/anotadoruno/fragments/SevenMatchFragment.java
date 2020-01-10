@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +45,40 @@ public class SevenMatchFragment extends Fragment {
     LinearLayout rondaDos;
     @BindView(R.id.rondaTres)
     LinearLayout rondaTres;
+    @BindView(R.id.rondaCuatro)
+    LinearLayout rondaCuatro;
+    @BindView(R.id.rondaCinco)
+    LinearLayout rondaCinco;
+    @BindView(R.id.rondaSeis)
+    LinearLayout rondaSeis;
+    @BindView(R.id.rondaSiete)
+    LinearLayout rondaSiete;
+    @BindView(R.id.rondaOcho)
+    LinearLayout rondaOcho;
+    @BindView(R.id.rondaNueve)
+    LinearLayout rondaNueve;
+    @BindView(R.id.rondaDiez)
+    LinearLayout rondaDiez;
+    @BindView(R.id.rondaOnce)
+    LinearLayout rondaOnce;
+    @BindView(R.id.rondaDoce)
+    LinearLayout rondaDoce;
+    @BindView(R.id.rondaTrece)
+    LinearLayout rondaTrece;
+    @BindView(R.id.rondaCatorce)
+    LinearLayout rondaCatorce;
+    @BindView(R.id.rondaQuince)
+    LinearLayout rondaQuince;
+    @BindView(R.id.rondaDieciSeis)
+    LinearLayout rondaDieciSeis;
+    @BindView(R.id.rondaDieciSiete)
+    LinearLayout rondaDieciSiete;
+    @BindView(R.id.rondaDieciOcho)
+    LinearLayout rondaDieciOcho;
+    @BindView(R.id.rondaDieciNueve)
+    LinearLayout rondaDieciNueve;
+    @BindView(R.id.rondaVeinte)
+    LinearLayout rondaVeinte;
 
     @BindView(R.id.partidaUnoUno)
     EditText partidaUnoUno;
@@ -75,6 +110,275 @@ public class SevenMatchFragment extends Fragment {
     @BindView(R.id.partidaDosSiete)
     EditText partidaDosSiete;
 
+    @BindView(R.id.partidaTresUno)
+    EditText partidaTresUno;
+    @BindView(R.id.partidaTresDos)
+    EditText partidaTresDos;
+    @BindView(R.id.partidaTresTres)
+    EditText partidaTresTres;
+    @BindView(R.id.partidaTresCuatro)
+    EditText partidaTresCuatro;
+    @BindView(R.id.partidaTresCinco)
+    EditText partidaTresCinco;
+    @BindView(R.id.partidaTresSeis)
+    EditText partidaTresSeis;
+    @BindView(R.id.partidaTresSiete)
+    EditText partidaTresSiete;
+
+    @BindView(R.id.partidaCuatroUno)
+    EditText partidaCuatroUno;
+    @BindView(R.id.partidaCuatroDos)
+    EditText partidaCuatroDos;
+    @BindView(R.id.partidaCuatroTres)
+    EditText partidaCuatroTres;
+    @BindView(R.id.partidaCuatroCuatro)
+    EditText partidaCuatroCuatro;
+    @BindView(R.id.partidaCuatroCinco)
+    EditText partidaCuatroCinco;
+    @BindView(R.id.partidaCuatroSeis)
+    EditText partidaCuatroSeis;
+    @BindView(R.id.partidaCuatroSiete)
+    EditText partidaCuatroSiete;
+
+    @BindView(R.id.partidaCincoUno)
+    EditText partidaCincoUno;
+    @BindView(R.id.partidaCincoDos)
+    EditText partidaCincoDos;
+    @BindView(R.id.partidaCincoTres)
+    EditText partidaCincoTres;
+    @BindView(R.id.partidaCincoCuatro)
+    EditText partidaCincoCuatro;
+    @BindView(R.id.partidaCincoCinco)
+    EditText partidaCincoCinco;
+    @BindView(R.id.partidaCincoSeis)
+    EditText partidaCincoSeis;
+    @BindView(R.id.partidaCincoSiete)
+    EditText partidaCincoSiete;
+
+    @BindView(R.id.partidaSeisUno)
+    EditText partidaSeisUno;
+    @BindView(R.id.partidaSeisDos)
+    EditText partidaSeisDos;
+    @BindView(R.id.partidaSeisTres)
+    EditText partidaSeisTres;
+    @BindView(R.id.partidaSeisCuatro)
+    EditText partidaSeisCuatro;
+    @BindView(R.id.partidaSeisCinco)
+    EditText partidaSeisCinco;
+    @BindView(R.id.partidaSeisSeis)
+    EditText partidaSeisSeis;
+    @BindView(R.id.partidaSeisSiete)
+    EditText partidaSeisSiete;
+
+    @BindView(R.id.partidaSieteUno)
+    EditText partidaSieteUno;
+    @BindView(R.id.partidaSieteDos)
+    EditText partidaSieteDos;
+    @BindView(R.id.partidaSieteTres)
+    EditText partidaSieteTres;
+    @BindView(R.id.partidaSieteCuatro)
+    EditText partidaSieteCuatro;
+    @BindView(R.id.partidaSieteCinco)
+    EditText partidaSieteCinco;
+    @BindView(R.id.partidaSieteSeis)
+    EditText partidaSieteSeis;
+    @BindView(R.id.partidaSieteSiete)
+    EditText partidaSieteSiete;
+
+    @BindView(R.id.partidaOchoUno)
+    EditText partidaOchoUno;
+    @BindView(R.id.partidaOchoDos)
+    EditText partidaOchoDos;
+    @BindView(R.id.partidaOchoTres)
+    EditText partidaOchoTres;
+    @BindView(R.id.partidaOchoCuatro)
+    EditText partidaOchoCuatro;
+    @BindView(R.id.partidaOchoCinco)
+    EditText partidaOchoCinco;
+    @BindView(R.id.partidaOchoSeis)
+    EditText partidaOchoSeis;
+    @BindView(R.id.partidaOchoSiete)
+    EditText partidaOchoSiete;
+
+    @BindView(R.id.partidaNueveUno)
+    EditText partidaNueveUno;
+    @BindView(R.id.partidaNueveDos)
+    EditText partidaNueveDos;
+    @BindView(R.id.partidaNueveTres)
+    EditText partidaNueveTres;
+    @BindView(R.id.partidaNueveCuatro)
+    EditText partidaNueveCuatro;
+    @BindView(R.id.partidaNueveCinco)
+    EditText partidaNueveCinco;
+    @BindView(R.id.partidaNueveSeis)
+    EditText partidaNueveSeis;
+    @BindView(R.id.partidaNueveSiete)
+    EditText partidaNueveSiete;
+
+    @BindView(R.id.partidaDiezUno)
+    EditText partidaDiezUno;
+    @BindView(R.id.partidaDiezDos)
+    EditText partidaDiezDos;
+    @BindView(R.id.partidaDiezTres)
+    EditText partidaDiezTres;
+    @BindView(R.id.partidaDiezCuatro)
+    EditText partidaDiezCuatro;
+    @BindView(R.id.partidaDiezCinco)
+    EditText partidaDiezCinco;
+    @BindView(R.id.partidaDiezSeis)
+    EditText partidaDiezSeis;
+    @BindView(R.id.partidaDiezSiete)
+    EditText partidaDiezSiete;
+
+    @BindView(R.id.partidaOnceUno)
+    EditText partidaOnceUno;
+    @BindView(R.id.partidaOnceDos)
+    EditText partidaOnceDos;
+    @BindView(R.id.partidaOnceTres)
+    EditText partidaOnceTres;
+    @BindView(R.id.partidaOnceCuatro)
+    EditText partidaOnceCuatro;
+    @BindView(R.id.partidaOnceCinco)
+    EditText partidaOnceCinco;
+    @BindView(R.id.partidaOnceSeis)
+    EditText partidaOnceSeis;
+    @BindView(R.id.partidaOnceSiete)
+    EditText partidaOnceSiete;
+
+    @BindView(R.id.partidaDoceUno)
+    EditText partidaDoceUno;
+    @BindView(R.id.partidaDoceDos)
+    EditText partidaDoceDos;
+    @BindView(R.id.partidaDoceTres)
+    EditText partidaDoceTres;
+    @BindView(R.id.partidaDoceCuatro)
+    EditText partidaDoceCuatro;
+    @BindView(R.id.partidaDoceCinco)
+    EditText partidaDoceCinco;
+    @BindView(R.id.partidaDoceSeis)
+    EditText partidaDoceSeis;
+    @BindView(R.id.partidaDoceSiete)
+    EditText partidaDoceSiete;
+
+    @BindView(R.id.partidaTreceUno)
+    EditText partidaTreceUno;
+    @BindView(R.id.partidaTreceDos)
+    EditText partidaTreceDos;
+    @BindView(R.id.partidaTreceTres)
+    EditText partidaTreceTres;
+    @BindView(R.id.partidaTreceCuatro)
+    EditText partidaTreceCuatro;
+    @BindView(R.id.partidaTreceCinco)
+    EditText partidaTreceCinco;
+    @BindView(R.id.partidaTreceSeis)
+    EditText partidaTreceSeis;
+    @BindView(R.id.partidaTreceSiete)
+    EditText partidaTreceSiete;
+
+    @BindView(R.id.partidaCatorceUno)
+    EditText partidaCatorceUno;
+    @BindView(R.id.partidaCatorceDos)
+    EditText partidaCatorceDos;
+    @BindView(R.id.partidaCatorceTres)
+    EditText partidaCatorceTres;
+    @BindView(R.id.partidaCatorceCuatro)
+    EditText partidaCatorceCuatro;
+    @BindView(R.id.partidaCatorceCinco)
+    EditText partidaCatorceCinco;
+    @BindView(R.id.partidaCatorceSeis)
+    EditText partidaCatorceSeis;
+    @BindView(R.id.partidaCatorceSiete)
+    EditText partidaCatorceSiete;
+
+    @BindView(R.id.partidaQuinceUno)
+    EditText partidaQuinceUno;
+    @BindView(R.id.partidaQuinceDos)
+    EditText partidaQuinceDos;
+    @BindView(R.id.partidaQuinceTres)
+    EditText partidaQuinceTres;
+    @BindView(R.id.partidaQuinceCuatro)
+    EditText partidaQuinceCuatro;
+    @BindView(R.id.partidaQuinceCinco)
+    EditText partidaQuinceCinco;
+    @BindView(R.id.partidaQuinceSeis)
+    EditText partidaQuinceSeis;
+    @BindView(R.id.partidaQuinceSiete)
+    EditText partidaQuinceSiete;
+
+    @BindView(R.id.partidaDieciSeisUno)
+    EditText partidaDieciSeisUno;
+    @BindView(R.id.partidaDieciSeisDos)
+    EditText partidaDieciSeisDos;
+    @BindView(R.id.partidaDieciSeisTres)
+    EditText partidaDieciSeisTres;
+    @BindView(R.id.partidaDieciSeisCuatro)
+    EditText partidaDieciSeisCuatro;
+    @BindView(R.id.partidaDieciSeisCinco)
+    EditText partidaDieciSeisCinco;
+    @BindView(R.id.partidaDieciSeisSeis)
+    EditText partidaDieciSeisSeis;
+    @BindView(R.id.partidaDieciSeisSiete)
+    EditText partidaDieciSeisSiete;
+
+    @BindView(R.id.partidaDieciSieteUno)
+    EditText partidaDieciSieteUno;
+    @BindView(R.id.partidaDieciSieteDos)
+    EditText partidaDieciSieteDos;
+    @BindView(R.id.partidaDieciSieteTres)
+    EditText partidaDieciSieteTres;
+    @BindView(R.id.partidaDieciSieteCuatro)
+    EditText partidaDieciSieteCuatro;
+    @BindView(R.id.partidaDieciSieteCinco)
+    EditText partidaDieciSieteCinco;
+    @BindView(R.id.partidaDieciSieteSeis)
+    EditText partidaDieciSieteSeis;
+    @BindView(R.id.partidaDieciSieteSiete)
+    EditText partidaDieciSieteSiete;
+
+    @BindView(R.id.partidaDieciOchoUno)
+    EditText partidaDieciOchoUno;
+    @BindView(R.id.partidaDieciOchoDos)
+    EditText partidaDieciOchoDos;
+    @BindView(R.id.partidaDieciOchoTres)
+    EditText partidaDieciOchoTres;
+    @BindView(R.id.partidaDieciOchoCuatro)
+    EditText partidaDieciOchoCuatro;
+    @BindView(R.id.partidaDieciOchoCinco)
+    EditText partidaDieciOchoCinco;
+    @BindView(R.id.partidaDieciOchoSeis)
+    EditText partidaDieciOchoSeis;
+    @BindView(R.id.partidaDieciOchoSiete)
+    EditText partidaDieciOchoSiete;
+
+    @BindView(R.id.partidaDieciNueveUno)
+    EditText partidaDieciNueveUno;
+    @BindView(R.id.partidaDieciNueveDos)
+    EditText partidaDieciNueveDos;
+    @BindView(R.id.partidaDieciNueveTres)
+    EditText partidaDieciNueveTres;
+    @BindView(R.id.partidaDieciNueveCuatro)
+    EditText partidaDieciNueveCuatro;
+    @BindView(R.id.partidaDieciNueveCinco)
+    EditText partidaDieciNueveCinco;
+    @BindView(R.id.partidaDieciNueveSeis)
+    EditText partidaDieciNueveSeis;
+    @BindView(R.id.partidaDieciNueveSiete)
+    EditText partidaDieciNueveSiete;
+
+    @BindView(R.id.partidaVeinteUno)
+    EditText partidaVeinteUno;
+    @BindView(R.id.partidaVeinteDos)
+    EditText partidaVeinteDos;
+    @BindView(R.id.partidaVeinteTres)
+    EditText partidaVeinteTres;
+    @BindView(R.id.partidaVeinteCuatro)
+    EditText partidaVeinteCuatro;
+    @BindView(R.id.partidaVeinteCinco)
+    EditText partidaVeinteCinco;
+    @BindView(R.id.partidaVeinteSeis)
+    EditText partidaVeinteSeis;
+    @BindView(R.id.partidaVeinteSiete)
+    EditText partidaVeinteSiete;
 
     @BindView(R.id.buttonSiguienteRondaSevenMatch)
     Button buttonSiguienteRondaSevenMatch;
@@ -109,6 +413,21 @@ public class SevenMatchFragment extends Fragment {
     @BindView(R.id.textViewPuntajeJugadorSiete)
     TextView textViewPuntajeJugadorSiete;
 
+    @BindView(R.id.byeJugadorUno)
+    ImageView byeJugadorUno;
+    @BindView(R.id.byeJugadorDos)
+    ImageView byeJugadorDos;
+    @BindView(R.id.byeJugadorTres)
+    ImageView byeJugadorTres;
+    @BindView(R.id.byeJugadorCuatro)
+    ImageView byeJugadorCuatro;
+    @BindView(R.id.byeJugadorCinco)
+    ImageView byeJugadorCinco;
+    @BindView(R.id.byeJugadorSeis)
+    ImageView byeJugadorSeis;
+    @BindView(R.id.byeJugadorSiete)
+    ImageView byeJugadorSiete;
+
 
     private String jugadorUnoSevenMatch;
     private String jugadorDosSevenMatch;
@@ -117,7 +436,8 @@ public class SevenMatchFragment extends Fragment {
     private String jugadorCincoSevenMatch;
     private String jugadorSeisSevenMatch;
     private String jugadorSieteSevenMatch;
-    private String limiteDePuntosSevenMatch;
+
+
     private Integer limiteDePuntos;
 
     private Integer puntajeJugadorUno = 0;
@@ -183,6 +503,7 @@ public class SevenMatchFragment extends Fragment {
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDos.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
+                            checkLimitePuntos();
                         }
                         break;
                     case 2:
@@ -203,12 +524,101 @@ public class SevenMatchFragment extends Fragment {
                             actualizarPuntajes();
                         }
                         break;
+                    case 3:
+                        if (checkEmptyNumbers(partidaTresUno, partidaTresDos, partidaTresTres, partidaTresCuatro, partidaTresCinco,
+                                partidaTresSeis, partidaTresSiete)) {
+                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTresUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTresDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaTresTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaTresCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaTresCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaTresSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaTresSiete);
+                            setFreezeRonda(partidaTresUno, partidaTresDos, partidaTresTres, partidaTresCuatro, partidaTresCinco,
+                                    partidaTresSeis, partidaTresSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaCuatro.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                        }
+                        break;
+                    case 4:
+                        if (checkEmptyNumbers(partidaCuatroUno, partidaCuatroDos, partidaCuatroTres, partidaCuatroCuatro,
+                                partidaCuatroCinco, partidaCuatroSeis, partidaCuatroSiete)) {
+                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCuatroUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCuatroDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaCuatroTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaCuatroCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaCuatroCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaCuatroSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaCuatroSiete);
+                            setFreezeRonda(partidaCuatroUno, partidaCuatroDos, partidaCuatroTres, partidaCuatroCuatro,
+                                    partidaCuatroCinco, partidaCuatroSeis, partidaCuatroSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaCinco.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                        }
+                        break;
+                    case 5:
+                        if (checkEmptyNumbers(partidaCincoUno, partidaCincoDos, partidaCincoTres, partidaCincoCuatro,
+                                partidaCincoCinco, partidaCincoSeis, partidaCincoSiete)) {
+                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCincoUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCincoDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaCincoTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaCincoCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaCincoCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaCincoSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaCincoSiete);
+                            setFreezeRonda(partidaCincoUno, partidaCincoDos, partidaCincoTres, partidaCincoCuatro,
+                                    partidaCincoCinco, partidaCincoSeis, partidaCincoSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaSeis.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                        }
+                        break;
+
                 }
             }
         });
 
         return view;
 
+    }
+
+    private void checkLimitePuntos() {
+        if (puntajeJugadorUno > limiteDePuntos) {
+            byeJugadorUno.setVisibility(View.VISIBLE);
+            textViewJugadorUnoSevenMatch.setVisibility(View.GONE);
+        }
+        if (puntajeJugadorDos > limiteDePuntos) {
+            byeJugadorDos.setVisibility(View.VISIBLE);
+            textViewJugadorDosSevenMatch.setVisibility(View.GONE);
+        }
+        if (puntajeJugadorTres > limiteDePuntos) {
+            byeJugadorTres.setVisibility(View.VISIBLE);
+            textViewJugadorTresSevenMatch.setVisibility(View.GONE);
+        }
+        if (puntajeJugadorCuatro < limiteDePuntos) {
+            byeJugadorCuatro.setVisibility(View.VISIBLE);
+            textViewJugadorCuatroSevenMatch.setVisibility(View.GONE);
+        }
+        if (puntajeJugadorCinco < limiteDePuntos) {
+            byeJugadorCinco.setVisibility(View.VISIBLE);
+            textViewJugadorCincoSevenMatch.setVisibility(View.GONE);
+        }
+        if (puntajeJugadorSeis < limiteDePuntos) {
+            byeJugadorSeis.setVisibility(View.VISIBLE);
+            textViewJugadorSeisSevenMatch.setVisibility(View.GONE);
+        }
+        if (puntajeJugadorSiete < limiteDePuntos) {
+            byeJugadorSiete.setVisibility(View.VISIBLE);
+            textViewJugadorSieteSevenMatch.setVisibility(View.GONE);
+        }
     }
 
     private void setFreezeRonda(EditText partidaDosUno, EditText partidaDosDos, EditText partidaDosTres, EditText partidaDosCuatro, EditText partidaDosCinco, EditText partidaDosSeis, EditText partidaDosSiete) {
@@ -245,7 +655,6 @@ public class SevenMatchFragment extends Fragment {
                 TextUtils.isEmpty(jugadorSeis.getText().toString()) ||
                 TextUtils.isEmpty(jugadorSiete.getText().toString());
     }
-
 
 
     private void setFreeze(EditText partidaUnoUno) {

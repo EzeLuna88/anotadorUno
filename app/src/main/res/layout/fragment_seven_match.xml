@@ -2323,70 +2323,203 @@
         android:orientation="horizontal"
         android:weightSum="7">
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorUno"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorDos"
+            <ImageView
+                android:id="@+id/byeJugadorUno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewPuntajeJugadorUno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:visibility="visible"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorTres"
+            <ImageView
+                android:id="@+id/byeJugadorDos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewPuntajeJugadorDos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorCuatro"
+            <ImageView
+                android:id="@+id/byeJugadorTres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewPuntajeJugadorTres"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorCinco"
+            <ImageView
+                android:id="@+id/byeJugadorCuatro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewPuntajeJugadorCuatro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
+            <ImageView
+                android:id="@+id/byeJugadorCinco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorSeis"
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewPuntajeJugadorCinco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textViewPuntajeJugadorSiete"
+            <ImageView
+                android:id="@+id/byeJugadorSeis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewPuntajeJugadorSeis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="@color/primary_text" />
+            android:layout_weight="1">
 
+            <ImageView
+                android:id="@+id/byeJugadorSiete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/textViewPuntajeJugadorSiete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text" />
+        </FrameLayout>
 
     </LinearLayout>
 
