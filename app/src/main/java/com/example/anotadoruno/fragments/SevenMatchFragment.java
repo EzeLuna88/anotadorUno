@@ -1,11 +1,16 @@
 package com.example.anotadoruno.fragments;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.opengl.Visibility;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.text.Editable;
 import android.text.TextUtils;
@@ -20,6 +25,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.anotadoruno.AnotadorActivity;
+import com.example.anotadoruno.MainActivity;
 import com.example.anotadoruno.R;
 
 import butterknife.BindView;
@@ -490,7 +497,7 @@ public class SevenMatchFragment extends Fragment {
                     case 1:
                         if (checkEmptyNumbers(partidaUnoUno, partidaUnoDos, partidaUnoTres, partidaUnoCuatro, partidaUnoCinco,
                                 partidaUnoSeis, partidaUnoSiete)) {
-                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
                             puntajeJugadorUno = getNumeroParcial(partidaUnoUno);
                             puntajeJugadorDos = getNumeroParcial(partidaUnoDos);
@@ -504,12 +511,15 @@ public class SevenMatchFragment extends Fragment {
                             rondaDos.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
                             checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDosUno, partidaDosDos, partidaDosTres, partidaDosCuatro, partidaDosCinco,
+                                    partidaDosSeis, partidaDosSiete);
                         }
                         break;
                     case 2:
                         if (checkEmptyNumbers(partidaDosUno, partidaDosDos, partidaDosTres, partidaDosCuatro, partidaDosCinco,
                                 partidaDosSeis, partidaDosSiete)) {
-                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
                             puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUno);
                             puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDos);
@@ -522,12 +532,16 @@ public class SevenMatchFragment extends Fragment {
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaTres.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaTresUno, partidaTresDos, partidaTresTres, partidaTresCuatro, partidaTresCinco,
+                                    partidaTresSeis, partidaTresSiete);
                         }
                         break;
                     case 3:
                         if (checkEmptyNumbers(partidaTresUno, partidaTresDos, partidaTresTres, partidaTresCuatro, partidaTresCinco,
                                 partidaTresSeis, partidaTresSiete)) {
-                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
                             puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTresUno);
                             puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTresDos);
@@ -541,12 +555,16 @@ public class SevenMatchFragment extends Fragment {
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaCuatro.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaCuatroUno, partidaCuatroDos, partidaCuatroTres, partidaCuatroCuatro,
+                                    partidaCuatroCinco, partidaCuatroSeis, partidaCuatroSiete);
                         }
                         break;
                     case 4:
                         if (checkEmptyNumbers(partidaCuatroUno, partidaCuatroDos, partidaCuatroTres, partidaCuatroCuatro,
                                 partidaCuatroCinco, partidaCuatroSeis, partidaCuatroSiete)) {
-                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
                             puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCuatroUno);
                             puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCuatroDos);
@@ -560,12 +578,16 @@ public class SevenMatchFragment extends Fragment {
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaCinco.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaCincoUno, partidaCincoDos, partidaCincoTres, partidaCincoCuatro,
+                                    partidaCincoCinco, partidaCincoSeis, partidaCincoSiete);
                         }
                         break;
                     case 5:
                         if (checkEmptyNumbers(partidaCincoUno, partidaCincoDos, partidaCincoTres, partidaCincoCuatro,
                                 partidaCincoCinco, partidaCincoSeis, partidaCincoSiete)) {
-                            Toast.makeText(getContext(), "Debe completar todos los casilleros", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
                             puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCincoUno);
                             puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCincoDos);
@@ -579,9 +601,359 @@ public class SevenMatchFragment extends Fragment {
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaSeis.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaSeisUno, partidaSeisDos, partidaSeisTres, partidaSeisCuatro,
+                                    partidaSeisCinco, partidaSeisSeis, partidaSeisSiete);
                         }
                         break;
-
+                    case 6:
+                        if (checkEmptyNumbers(partidaSeisUno, partidaSeisDos, partidaSeisTres, partidaSeisCuatro,
+                                partidaSeisCinco, partidaSeisSeis, partidaSeisSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaSeisUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaSeisDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaSeisTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaSeisCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaSeisCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaSeisSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaSeisSiete);
+                            setFreezeRonda(partidaSeisUno, partidaSeisDos, partidaSeisTres, partidaSeisCuatro,
+                                    partidaSeisCinco, partidaSeisSeis, partidaSeisSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaSiete.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaSieteUno, partidaSieteDos, partidaSieteTres, partidaSieteCuatro,
+                                    partidaSieteCinco, partidaSieteSeis, partidaSieteSiete);
+                        }
+                        break;
+                    case 7:
+                        if (checkEmptyNumbers(partidaSieteUno, partidaSieteDos, partidaSieteTres, partidaSieteCuatro,
+                                partidaSieteCinco, partidaSieteSeis, partidaSieteSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaSieteUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaSieteDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaSieteTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaSieteCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaSieteCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaSieteSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaSieteSiete);
+                            setFreezeRonda(partidaSieteUno, partidaSieteDos, partidaSieteTres, partidaSieteCuatro,
+                                    partidaSieteCinco, partidaSieteSeis, partidaSieteSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaOcho.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaOchoUno, partidaOchoDos, partidaOchoTres, partidaOchoCuatro,
+                                    partidaOchoCinco, partidaOchoSeis, partidaOchoSiete);
+                        }
+                        break;
+                    case 8:
+                        if (checkEmptyNumbers(partidaOchoUno, partidaOchoDos, partidaOchoTres, partidaOchoCuatro,
+                                partidaOchoCinco, partidaOchoSeis, partidaOchoSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaOchoUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaOchoDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaOchoTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaOchoCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaOchoCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaOchoSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaOchoSiete);
+                            setFreezeRonda(partidaOchoUno, partidaOchoDos, partidaOchoTres, partidaOchoCuatro,
+                                    partidaOchoCinco, partidaOchoSeis, partidaOchoSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaNueve.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaNueveUno, partidaNueveDos, partidaNueveTres, partidaNueveCuatro,
+                                    partidaNueveCinco, partidaNueveSeis, partidaNueveSiete);
+                        }
+                        break;
+                    case 9:
+                        if (checkEmptyNumbers(partidaNueveUno, partidaNueveDos, partidaNueveTres, partidaNueveCuatro,
+                                partidaNueveCinco, partidaNueveSeis, partidaNueveSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaNueveUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaNueveDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaNueveTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaNueveCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaNueveCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaNueveSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaNueveSiete);
+                            setFreezeRonda(partidaNueveUno, partidaNueveDos, partidaNueveTres, partidaNueveCuatro,
+                                    partidaNueveCinco, partidaNueveSeis, partidaNueveSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDiez.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDiezUno, partidaDiezDos, partidaDiezTres, partidaDiezCuatro,
+                                    partidaDiezCinco, partidaDiezSeis, partidaDiezSiete);
+                        }
+                        break;
+                    case 10:
+                        if (checkEmptyNumbers(partidaDiezUno, partidaDiezDos, partidaDiezTres, partidaDiezCuatro,
+                                partidaDiezCinco, partidaDiezSeis, partidaDiezSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDiezUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDiezDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDiezTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDiezCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDiezCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDiezSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDiezSiete);
+                            setFreezeRonda(partidaDiezUno, partidaDiezDos, partidaDiezTres, partidaDiezCuatro,
+                                    partidaDiezCinco, partidaDiezSeis, partidaDiezSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaOnce.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaOnceUno, partidaOnceDos, partidaOnceTres, partidaOnceCuatro,
+                                    partidaOnceCinco, partidaOnceSeis, partidaOnceSiete);
+                        }
+                        break;
+                    case 11:
+                        if (checkEmptyNumbers(partidaOnceUno, partidaOnceDos, partidaOnceTres, partidaOnceCuatro, partidaOnceCinco,
+                                partidaOnceSeis, partidaOnceSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = getNumeroParcial(partidaOnceUno);
+                            puntajeJugadorDos = getNumeroParcial(partidaOnceDos);
+                            puntajeJugadorTres = getNumeroParcial(partidaOnceTres);
+                            puntajeJugadorCuatro = getNumeroParcial(partidaOnceCuatro);
+                            puntajeJugadorCinco = getNumeroParcial(partidaOnceCinco);
+                            puntajeJugadorSeis = getNumeroParcial(partidaOnceSeis);
+                            puntajeJugadorSiete = getNumeroParcial(partidaOnceSiete);
+                            setFreezeRonda(partidaOnceUno, partidaOnceDos, partidaOnceTres, partidaOnceCuatro, partidaOnceCinco,
+                                    partidaOnceSeis, partidaOnceSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDoce.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDoceUno, partidaDoceDos, partidaDoceTres, partidaDoceCuatro, partidaDoceCinco,
+                                    partidaDoceSeis, partidaDoceSiete);
+                        }
+                        break;
+                    case 12:
+                        if (checkEmptyNumbers(partidaDoceUno, partidaDoceDos, partidaDoceTres, partidaDoceCuatro, partidaDoceCinco,
+                                partidaDoceSeis, partidaDoceSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDoceUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDoceDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDoceTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDoceCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDoceCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDoceSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDoceSiete);
+                            setFreezeRonda(partidaDoceUno, partidaDoceDos, partidaDoceTres, partidaDoceCuatro, partidaDoceCinco,
+                                    partidaDoceSeis, partidaDoceSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaTrece.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaTreceUno, partidaTreceDos, partidaTreceTres, partidaTreceCuatro,
+                                    partidaTreceCinco,
+                                    partidaTreceSeis, partidaTreceSiete);
+                        }
+                        break;
+                    case 13:
+                        if (checkEmptyNumbers(partidaTreceUno, partidaTreceDos, partidaTreceTres, partidaTreceCuatro,
+                                partidaTreceCinco,
+                                partidaTreceSeis, partidaTreceSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTreceUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTreceDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaTreceTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaTreceCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaTreceCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaTreceSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaTreceSiete);
+                            setFreezeRonda(partidaTreceUno, partidaTreceDos, partidaTreceTres, partidaTreceCuatro, partidaTreceCinco,
+                                    partidaTreceSeis, partidaTreceSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaCatorce.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaCatorceUno, partidaCatorceDos, partidaCatorceTres,
+                                    partidaCatorceCuatro,
+                                    partidaCatorceCinco, partidaCatorceSeis, partidaCatorceSiete);
+                        }
+                        break;
+                    case 14:
+                        if (checkEmptyNumbers(partidaCatorceUno, partidaCatorceDos, partidaCatorceTres, partidaCatorceCuatro,
+                                partidaCatorceCinco, partidaCatorceSeis, partidaCatorceSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCatorceUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCatorceDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaCatorceTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaCatorceCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaCatorceCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaCatorceSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaCatorceSiete);
+                            setFreezeRonda(partidaCatorceUno, partidaCatorceDos, partidaCatorceTres, partidaCatorceCuatro,
+                                    partidaCatorceCinco, partidaCatorceSeis, partidaCatorceSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaQuince.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaQuinceUno, partidaQuinceDos, partidaQuinceTres, partidaQuinceCuatro,
+                                    partidaQuinceCinco, partidaQuinceSeis, partidaQuinceSiete);
+                        }
+                        break;
+                    case 15:
+                        if (checkEmptyNumbers(partidaQuinceUno, partidaQuinceDos, partidaQuinceTres, partidaQuinceCuatro,
+                                partidaQuinceCinco, partidaQuinceSeis, partidaQuinceSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaQuinceUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaQuinceDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaQuinceTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaQuinceCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaQuinceCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaQuinceSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaQuinceSiete);
+                            setFreezeRonda(partidaQuinceUno, partidaQuinceDos, partidaQuinceTres, partidaQuinceCuatro,
+                                    partidaQuinceCinco, partidaQuinceSeis, partidaQuinceSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDieciSeis.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDieciSeisUno, partidaDieciSeisDos, partidaDieciSeisTres,
+                                    partidaDieciSeisCuatro,
+                                    partidaDieciSeisCinco, partidaDieciSeisSeis, partidaDieciSeisSiete);
+                        }
+                        break;
+                    case 16:
+                        if (checkEmptyNumbers(partidaDieciSeisUno, partidaDieciSeisDos, partidaDieciSeisTres, partidaDieciSeisCuatro,
+                                partidaDieciSeisCinco, partidaDieciSeisSeis, partidaDieciSeisSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciSeisUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciSeisDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDieciSeisTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDieciSeisCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDieciSeisCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDieciSeisSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDieciSeisSiete);
+                            setFreezeRonda(partidaDieciSeisUno, partidaDieciSeisDos, partidaDieciSeisTres, partidaDieciSeisCuatro,
+                                    partidaSeisCinco, partidaSeisSeis, partidaSeisSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDieciSiete.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDieciSieteUno, partidaDieciSieteDos, partidaDieciSieteTres,
+                                    partidaDieciSieteCuatro,
+                                    partidaDieciSieteCinco, partidaDieciSieteSeis, partidaDieciSieteSiete);
+                        }
+                        break;
+                    case 17:
+                        if (checkEmptyNumbers(partidaDieciSieteUno, partidaDieciSieteDos, partidaDieciSieteTres, partidaDieciSieteCuatro,
+                                partidaDieciSieteCinco, partidaDieciSieteSeis, partidaDieciSieteSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciSieteUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciSieteDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDieciSieteTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDieciSieteCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDieciSieteCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDieciSieteSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDieciSieteSiete);
+                            setFreezeRonda(partidaDieciSieteUno, partidaDieciSieteDos, partidaDieciSieteTres, partidaDieciSieteCuatro,
+                                    partidaDieciSieteCinco, partidaDieciSieteSeis, partidaDieciSieteSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDieciOcho.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDieciOchoUno, partidaDieciOchoDos, partidaDieciOchoTres, partidaDieciOchoCuatro,
+                                    partidaDieciOchoCinco, partidaDieciOchoSeis, partidaDieciOchoSiete);
+                        }
+                        break;
+                    case 18:
+                        if (checkEmptyNumbers(partidaDieciOchoUno, partidaDieciOchoDos, partidaDieciOchoTres, partidaDieciOchoCuatro,
+                                partidaDieciOchoCinco, partidaDieciOchoSeis, partidaDieciOchoSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciOchoUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciOchoDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDieciOchoTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDieciOchoCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDieciOchoCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDieciOchoSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDieciOchoSiete);
+                            setFreezeRonda(partidaDieciOchoUno, partidaDieciOchoDos, partidaDieciOchoTres, partidaDieciOchoCuatro,
+                                    partidaDieciOchoCinco, partidaDieciOchoSeis, partidaDieciOchoSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaDieciNueve.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaDieciNueveUno, partidaDieciNueveDos, partidaDieciNueveTres, partidaDieciNueveCuatro,
+                                    partidaDieciNueveCinco, partidaDieciNueveSeis, partidaDieciNueveSiete);
+                        }
+                        break;
+                    case 19:
+                        if (checkEmptyNumbers(partidaDieciNueveUno, partidaDieciNueveDos, partidaDieciNueveTres, partidaDieciNueveCuatro,
+                                partidaDieciNueveCinco, partidaDieciNueveSeis, partidaDieciNueveSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciNueveUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciNueveDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaDieciNueveTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaDieciNueveCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaDieciNueveCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDieciNueveSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDieciNueveSiete);
+                            setFreezeRonda(partidaDieciNueveUno, partidaDieciNueveDos, partidaDieciNueveTres, partidaDieciNueveCuatro,
+                                    partidaDieciNueveCinco, partidaDieciNueveSeis, partidaDieciNueveSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeinte.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeinteUno, partidaVeinteDos, partidaVeinteTres, partidaVeinteCuatro,
+                                    partidaVeinteCinco, partidaVeinteSeis, partidaVeinteSiete);
+                        }
+                        break;
+                    case 20:
+                        if (checkEmptyNumbers(partidaVeinteUno, partidaVeinteDos, partidaVeinteTres, partidaVeinteCuatro,
+                                partidaVeinteCinco, partidaVeinteSeis, partidaVeinteSiete)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeinteUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeinteDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeinteTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeinteCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeinteCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeinteSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaVeinteSiete);
+                            setFreezeRonda(partidaVeinteUno, partidaVeinteDos, partidaVeinteTres, partidaVeinteCuatro,
+                                    partidaVeinteCinco, partidaVeinteSeis, partidaVeinteSiete);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                        }
+                        break;
                 }
             }
         });
@@ -590,34 +962,96 @@ public class SevenMatchFragment extends Fragment {
 
     }
 
+    private void generalPerdedorNoSumaMas(EditText partidaUno, EditText partidaDos, EditText partidaTres, EditText partidaCuatro,
+                                          EditText partidaCinco, EditText partidaSeis, EditText partidaSiete) {
+        perdedorNoSumaMas(puntajeJugadorUno, partidaUno);
+        perdedorNoSumaMas(puntajeJugadorDos, partidaDos);
+        perdedorNoSumaMas(puntajeJugadorTres, partidaTres);
+        perdedorNoSumaMas(puntajeJugadorCuatro, partidaCuatro);
+        perdedorNoSumaMas(puntajeJugadorCinco, partidaCinco);
+        perdedorNoSumaMas(puntajeJugadorSeis, partidaSeis);
+        perdedorNoSumaMas(puntajeJugadorSiete, partidaSiete);
+    }
+
+    private void perdedorNoSumaMas(Integer puntajeJugador, EditText partida) {
+        if (puntajeJugador > limiteDePuntos) {
+            partida.setText("0");
+            partida.setEnabled(false);
+        }
+    }
+
+    private void checkWinner() {
+        checkWinnerPlayer(puntajeJugadorUno, puntajeJugadorDos, puntajeJugadorTres, puntajeJugadorCuatro,
+                puntajeJugadorCinco, puntajeJugadorSeis, textViewJugadorSieteSevenMatch);
+        checkWinnerPlayer(puntajeJugadorUno, puntajeJugadorDos, puntajeJugadorTres, puntajeJugadorCuatro,
+                puntajeJugadorCinco, puntajeJugadorSiete, textViewJugadorSeisSevenMatch);
+        checkWinnerPlayer(puntajeJugadorUno, puntajeJugadorDos, puntajeJugadorTres, puntajeJugadorCuatro,
+                puntajeJugadorSeis, puntajeJugadorSiete, textViewJugadorCincoSevenMatch);
+        checkWinnerPlayer(puntajeJugadorUno, puntajeJugadorDos, puntajeJugadorTres, puntajeJugadorCinco,
+                puntajeJugadorSeis, puntajeJugadorSiete, textViewJugadorCuatroSevenMatch);
+        checkWinnerPlayer(puntajeJugadorUno, puntajeJugadorDos, puntajeJugadorCuatro, puntajeJugadorCinco,
+                puntajeJugadorSeis, puntajeJugadorSiete, textViewJugadorTresSevenMatch);
+        checkWinnerPlayer(puntajeJugadorUno, puntajeJugadorTres, puntajeJugadorCuatro, puntajeJugadorCinco,
+                puntajeJugadorSeis, puntajeJugadorSiete, textViewJugadorDosSevenMatch);
+        checkWinnerPlayer(puntajeJugadorDos, puntajeJugadorTres, puntajeJugadorCuatro, puntajeJugadorCinco,
+                puntajeJugadorSeis, puntajeJugadorSiete, textViewJugadorUnoSevenMatch);
+    }
+
+    private void checkWinnerPlayer(Integer jugadorUno, Integer jugadorDos, Integer jugadorTres, Integer jugadorCuatro,
+                                   Integer jugadorCinco, Integer jugadorSeis, TextView nombreJugadorGanador) {
+        if (jugadorUno > limiteDePuntos && jugadorDos > limiteDePuntos
+                && jugadorTres > limiteDePuntos && jugadorCuatro > limiteDePuntos
+                && jugadorCinco > limiteDePuntos && jugadorSeis > limiteDePuntos) {
+            new AlertDialog.Builder(getContext())
+                    .setMessage("Felicidades " + nombreJugadorGanador.getText().toString() + " has ganado")
+                    .setPositiveButton(R.string.volver_al_inicio, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Intent intent = new Intent(getActivity(), MainActivity.class);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton(R.string.nueva_partida, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            AmistosoCrearJugadoresFragment amistosoCrearJugadoresFragment = new AmistosoCrearJugadoresFragment();
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                            fragmentTransaction.replace(R.id.contenedorDeFragment, amistosoCrearJugadoresFragment).commit();
+                        }
+                    })
+                    .show();
+        }
+    }
+
     private void checkLimitePuntos() {
         if (puntajeJugadorUno > limiteDePuntos) {
             byeJugadorUno.setVisibility(View.VISIBLE);
-            textViewJugadorUnoSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorUno.setVisibility(View.GONE);
         }
         if (puntajeJugadorDos > limiteDePuntos) {
             byeJugadorDos.setVisibility(View.VISIBLE);
-            textViewJugadorDosSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorDos.setVisibility(View.GONE);
         }
         if (puntajeJugadorTres > limiteDePuntos) {
             byeJugadorTres.setVisibility(View.VISIBLE);
-            textViewJugadorTresSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorTres.setVisibility(View.GONE);
         }
-        if (puntajeJugadorCuatro < limiteDePuntos) {
+        if (puntajeJugadorCuatro > limiteDePuntos) {
             byeJugadorCuatro.setVisibility(View.VISIBLE);
-            textViewJugadorCuatroSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorCuatro.setVisibility(View.GONE);
         }
-        if (puntajeJugadorCinco < limiteDePuntos) {
+        if (puntajeJugadorCinco > limiteDePuntos) {
             byeJugadorCinco.setVisibility(View.VISIBLE);
-            textViewJugadorCincoSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorCinco.setVisibility(View.GONE);
         }
-        if (puntajeJugadorSeis < limiteDePuntos) {
+        if (puntajeJugadorSeis > limiteDePuntos) {
             byeJugadorSeis.setVisibility(View.VISIBLE);
-            textViewJugadorSeisSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorSeis.setVisibility(View.GONE);
         }
-        if (puntajeJugadorSiete < limiteDePuntos) {
+        if (puntajeJugadorSiete > limiteDePuntos) {
             byeJugadorSiete.setVisibility(View.VISIBLE);
-            textViewJugadorSieteSevenMatch.setVisibility(View.GONE);
+            textViewPuntajeJugadorSiete.setVisibility(View.GONE);
         }
     }
 
@@ -663,5 +1097,6 @@ public class SevenMatchFragment extends Fragment {
         partidaUnoUno.setKeyListener(null);
         partidaUnoUno.setBackgroundColor(Color.TRANSPARENT);
     }
+
 
 }

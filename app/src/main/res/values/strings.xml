@@ -19,6 +19,9 @@
     <string name="faltan_nombres">Todos los jugadores deben tener nombre</string>
     <string name="cantidad_de_jugadores">Cantidad de jugadores: </string>
     <string name="limite_de_puntos">Limite de Puntos: </string>
+    <string name="volver_al_inicio">Volver al inicio</string>
+    <string name="nueva_partida">Nueva partida</string>
+    <string name="llenar_todos_los_casilleros">Debe completar todos los casilleros</string>
     <string-array name="numeros">
         <item>2</item>
         <item>3</item>
