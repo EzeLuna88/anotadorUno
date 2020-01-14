@@ -727,13 +727,13 @@ public class SevenMatchFragment extends Fragment {
                                 partidaOnceSeis, partidaOnceSiete)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = getNumeroParcial(partidaOnceUno);
-                            puntajeJugadorDos = getNumeroParcial(partidaOnceDos);
-                            puntajeJugadorTres = getNumeroParcial(partidaOnceTres);
-                            puntajeJugadorCuatro = getNumeroParcial(partidaOnceCuatro);
-                            puntajeJugadorCinco = getNumeroParcial(partidaOnceCinco);
-                            puntajeJugadorSeis = getNumeroParcial(partidaOnceSeis);
-                            puntajeJugadorSiete = getNumeroParcial(partidaOnceSiete);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaOnceUno);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaOnceDos);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaOnceTres);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaOnceCuatro);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaOnceCinco);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaOnceSeis);
+                            puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaOnceSiete);
                             setFreezeRonda(partidaOnceUno, partidaOnceDos, partidaOnceTres, partidaOnceCuatro, partidaOnceCinco,
                                     partidaOnceSeis, partidaOnceSiete);
                             contadorDeRonda = contadorDeRonda + 1;

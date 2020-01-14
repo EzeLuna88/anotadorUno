@@ -188,7 +188,16 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 nombreJugadorCuatro == null || nombreJugadorCinco == null || nombreJugadorSeis == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
                         } else {
+                            Bundle args = new Bundle();
+                            args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_TRES, nombreJugadorTres);
+                            args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_CUATRO, nombreJugadorCuatro);
+                            args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_CINCO, nombreJugadorCinco);
+                            args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_SEIS, nombreJugadorSeis);
+                            args.putSerializable(SixMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             SixMatchFragment sixMatchFragment = new SixMatchFragment();
+                            sixMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, sixMatchFragment).commit();
@@ -457,7 +466,7 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
     }
 
     private void setSpinnerPlayers() {
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.numeros, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getContext(), R.array.numeros, R.layout.textview_spinner);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCantidadDeJugadores.setAdapter(adapter);
         spinnerCantidadDeJugadores.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
