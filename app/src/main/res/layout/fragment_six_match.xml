@@ -2087,7 +2087,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/byeJugadorUno"
+                android:id="@+id/byeJugadorUnoSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -2095,7 +2095,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/textViewPuntajeJugadorUno"
+                android:id="@+id/textViewPuntajeJugadorUnoSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -2116,7 +2116,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/byeJugadorDos"
+                android:id="@+id/byeJugadorDosSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -2124,7 +2124,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/textViewPuntajeJugadorDos"
+                android:id="@+id/textViewPuntajeJugadorDosSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -2145,7 +2145,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/byeJugadorTres"
+                android:id="@+id/byeJugadorTresSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -2153,7 +2153,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/textViewPuntajeJugadorTres"
+                android:id="@+id/textViewPuntajeJugadorTresSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -2174,7 +2174,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/byeJugadorCuatro"
+                android:id="@+id/byeJugadorCuatroSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -2182,7 +2182,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/textViewPuntajeJugadorCuatro"
+                android:id="@+id/textViewPuntajeJugadorCuatroSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -2203,7 +2203,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/byeJugadorCinco"
+                android:id="@+id/byeJugadorCincoSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -2211,7 +2211,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/textViewPuntajeJugadorCinco"
+                android:id="@+id/textViewPuntajeJugadorCincoSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -2232,7 +2232,7 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/byeJugadorSeis"
+                android:id="@+id/byeJugadorSeisSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -2240,7 +2240,7 @@
                 android:visibility="gone" />
 
             <TextView
-                android:id="@+id/textViewPuntajeJugadorSeis"
+                android:id="@+id/textViewPuntajeJugadorSeisSixMatch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -2254,7 +2254,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/buttonSiguienteRondaSevenMatch"
+        android:id="@+id/buttonSiguienteRondaSixMatch"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="10dp"

@@ -177,7 +177,15 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 nombreJugadorCuatro == null || nombreJugadorCinco == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
                         } else {
+                            Bundle args = new Bundle();
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_TRES, nombreJugadorTres);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_CUATRO, nombreJugadorCuatro);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_CINCO, nombreJugadorCinco);
+                            args.putSerializable(FiveMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             FiveMatchFragment fiveMatchFragment = new FiveMatchFragment();
+                            fiveMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, fiveMatchFragment).commit();

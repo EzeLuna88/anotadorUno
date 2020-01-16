@@ -5,42 +5,1906 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/icons"
+    android:orientation="vertical"
     tools:context=".fragments.TwoMatchFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/textViewJugadorUnoFiveMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="jugador uno"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/textViewJugadorDosFiveMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="jugador dos"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/textViewJugadorTresFiveMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="jugador tres"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/textViewJugadorCuatroFiveMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="jugador cuatro"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <TextView
+            android:id="@+id/textViewJugadorCincoFiveMatch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="jugador cinco"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUno"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="0.2"
+        android:background="@color/secondary_text"
+        android:orientation="vertical" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="0dp"
+        android:layout_weight="15.3">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
+                android:id="@+id/rondaUnoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/partidaUnoUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaUnoDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaUnoTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaUnoCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaUnoCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDosFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDosUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDosDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDosTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDosCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDosCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaTresFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaTresUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaTresDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaTresTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaTresCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaTresCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaCuatroFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaCuatroUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCuatroDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaCuatroTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCuatroCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCuatroCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaCincoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaCincoUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCincoDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaCincoTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCincoCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCincoCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaSeisFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaSeisUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaSeisDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaSeisTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaSeisCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaSeisCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaSieteFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaSieteUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaSieteDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaSieteTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaSieteCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaSieteCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaOchoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaOchoUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaOchoDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaOchoTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaOchoCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaOchoCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaNueveFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaNueveUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaNueveDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaNueveTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaNueveCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaNueveCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDiezFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDiezUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDiezDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDiezTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDiezCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDiezCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaOnceFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaOnceUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaOnceDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaOnceTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaOnceCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaOnceCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDoceFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDoceUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDoceDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDoceTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDoceCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDoceCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaTreceFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaTreceUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaTreceDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaTreceTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaTreceCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaTreceCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaCatorceFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaCatorceUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCatorceDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaCatorceTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCatorceCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaCatorceCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaQuinceFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaQuinceUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaQuinceDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaQuinceTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaQuinceCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaQuinceCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDieciSeisFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDieciSeisUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciSeisDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDieciSeisTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciSeisCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciSeisCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDieciSieteFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDieciSieteUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciSieteDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDieciSieteTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciSieteCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciSieteCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDieciOchoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDieciOchoUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciOchoDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDieciOchoTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciOchoCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciOchoCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaDieciNueveFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaDieciNueveUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciNueveDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaDieciNueveTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciNueveCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaDieciNueveCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rondaVeinteFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/partidaVeinteUnoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaVeinteDosFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+
+                <EditText
+                    android:id="@+id/partidaVeinteTresFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaVeinteCuatroFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_text" />
+
+                <EditText
+                    android:id="@+id/partidaVeinteCincoFiveMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/primary_text"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/primary_text" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSumaDePuntajes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSiguienteRondaSevenMatch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+            <ImageView
+                android:id="@+id/byeJugadorUnoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewPuntajeJugadorUnoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/byeJugadorDosFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewPuntajeJugadorDosFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/byeJugadorTresFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewPuntajeJugadorTresFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/byeJugadorCuatroFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewPuntajeJugadorCuatroFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/primary_text" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/byeJugadorCincoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewPuntajeJugadorCincoFiveMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/primary_text"
+                android:visibility="visible" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSiguienteRondaFiveMatch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2"
+        android:background="@color/primary"
+        android:text="Siguiente Ronda"
+        android:textColor="@color/primary_text"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </LinearLayout>
