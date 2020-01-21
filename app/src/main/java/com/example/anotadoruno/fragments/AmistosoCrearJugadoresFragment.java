@@ -143,6 +143,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                     case "2":
                         if (nombreJugadorUno == null || nombreJugadorDos == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
 
 
@@ -155,8 +158,17 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                     case "3":
                         if (nombreJugadorUno == null || nombreJugadorDos == null || nombreJugadorTres == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
+                            Bundle args = new Bundle();
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_TRES, nombreJugadorTres);
+                            args.putSerializable(FiveMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             ThreeMatchFragment threeMatchFragment = new ThreeMatchFragment();
+                            threeMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, threeMatchFragment).commit();
@@ -165,8 +177,18 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                     case "4":
                         if (nombreJugadorUno == null || nombreJugadorDos == null || nombreJugadorTres == null || nombreJugadorCuatro == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
+                            Bundle args = new Bundle();
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_TRES, nombreJugadorTres);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_CUATRO, nombreJugadorCuatro);
+                            args.putSerializable(FiveMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             FourMatchFragment fourMatchFragment = new FourMatchFragment();
+                            fourMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, fourMatchFragment).commit();
@@ -176,6 +198,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                         if (nombreJugadorUno == null || nombreJugadorDos == null || nombreJugadorTres == null ||
                                 nombreJugadorCuatro == null || nombreJugadorCinco == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
                             Bundle args = new Bundle();
                             args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
@@ -195,6 +220,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                         if (nombreJugadorUno == null || nombreJugadorDos == null || nombreJugadorTres == null ||
                                 nombreJugadorCuatro == null || nombreJugadorCinco == null || nombreJugadorSeis == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
                             Bundle args = new Bundle();
                             args.putSerializable(SixMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
@@ -216,6 +244,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 nombreJugadorCuatro == null || nombreJugadorCinco == null
                                 || nombreJugadorSeis == null || nombreJugadorSiete == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
                             Bundle args = new Bundle();
                             args.putSerializable(SevenMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
@@ -239,6 +270,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 || nombreJugadorSeis == null || nombreJugadorSiete == null
                                 || nombreJugadorOcho == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
                             EightMatchFragment eightMatchFragment = new EightMatchFragment();
                             FragmentManager fragmentManager = getFragmentManager();
@@ -252,6 +286,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 || nombreJugadorSeis == null || nombreJugadorSiete == null
                                 || nombreJugadorOcho == null || nombreJugadorNueve == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
                             NineMatchFragment nineMatchFragment = new NineMatchFragment();
                             FragmentManager fragmentManager = getFragmentManager();
@@ -265,6 +302,9 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                                 || nombreJugadorSeis == null || nombreJugadorSiete == null
                                 || nombreJugadorOcho == null || nombreJugadorNueve == null || nombreJugadorDiez == null) {
                             Toast.makeText(getContext(), R.string.faltan_nombres, Toast.LENGTH_SHORT).show();
+                        }
+                        if (limiteDePuntos == null) {
+                            Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
                             TenMatchFragment tenMatchFragment = new TenMatchFragment();
                             FragmentManager fragmentManager = getFragmentManager();

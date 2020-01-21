@@ -854,7 +854,7 @@ public class SevenMatchFragment extends Fragment {
                             puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDieciSeisSeis);
                             puntajeJugadorSiete = puntajeJugadorSiete + getNumeroParcial(partidaDieciSeisSiete);
                             setFreezeRonda(partidaDieciSeisUno, partidaDieciSeisDos, partidaDieciSeisTres, partidaDieciSeisCuatro,
-                                    partidaSeisCinco, partidaSeisSeis, partidaSeisSiete);
+                                    partidaDieciSeisCinco, partidaDieciSeisSeis, partidaDieciSeisSiete);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDieciSiete.setVisibility(View.VISIBLE);
                             actualizarPuntajes();

@@ -813,7 +813,7 @@ public class SixMatchFragment extends Fragment {
                             puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaDieciSeisSeisSixMatch);
                             setFreezeRonda(partidaDieciSeisUnoSixMatch, partidaDieciSeisDosSixMatch,
                                     partidaDieciSeisTresSixMatch, partidaDieciSeisCuatroSixMatch,
-                                    partidaSeisCincoSixMatch, partidaSeisSeisSixMatch);
+                                    partidaDieciSeisCincoSixMatch, partidaDieciSeisSeisSixMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDieciSieteSixMatch.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
