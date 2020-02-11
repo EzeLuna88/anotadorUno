@@ -147,9 +147,12 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                         if (limiteDePuntos == null) {
                             Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
-
-
+                            Bundle args = new Bundle();
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(FiveMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(FiveMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             TwoMatchFragment twoMatchFragment = new TwoMatchFragment();
+                            twoMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, twoMatchFragment).commit();

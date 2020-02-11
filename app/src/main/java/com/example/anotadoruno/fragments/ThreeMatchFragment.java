@@ -42,7 +42,7 @@ public class ThreeMatchFragment extends Fragment {
     LinearLayout rondaUnoThreeMatch;
     @BindView(R.id.rondaDosThreeMatch)
     LinearLayout rondaDosThreeMatch;
-    @BindView(R.id.rondaTresFourMatch)
+    @BindView(R.id.rondaTresThreeMatch)
     LinearLayout rondaTresThreeMatch;
     @BindView(R.id.rondaCuatroThreeMatch)
     LinearLayout rondaCuatroThreeMatch;
