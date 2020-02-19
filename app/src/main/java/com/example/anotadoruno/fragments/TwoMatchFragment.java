@@ -337,8 +337,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaTresUnoTwoMatch, partidaTresDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTresUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTresDosTwoMatch);
                             setFreezeRonda(partidaTresUnoTwoMatch, partidaTresDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaCuatroTwoMatch.setVisibility(View.VISIBLE);
@@ -352,8 +352,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaCuatroUnoTwoMatch, partidaCuatroDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCuatroUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCuatroDosTwoMatch);
                             setFreezeRonda(partidaCuatroUnoTwoMatch, partidaCuatroDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaCincoTwoMatch.setVisibility(View.VISIBLE);
@@ -367,8 +367,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaCincoUnoTwoMatch, partidaCincoDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCincoUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCincoDosTwoMatch);
                             setFreezeRonda(partidaCincoUnoTwoMatch, partidaCincoDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaSeisTwoMatch.setVisibility(View.VISIBLE);
@@ -382,8 +382,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaSeisUnoTwoMatch, partidaSeisDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaSeisUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaSeisDosTwoMatch);
                             setFreezeRonda(partidaSeisUnoTwoMatch, partidaSeisDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaSieteTwoMatch.setVisibility(View.VISIBLE);
@@ -397,8 +397,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaSieteUnoTwoMatch, partidaSieteDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaSieteUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaSieteDosTwoMatch);
                             setFreezeRonda(partidaSieteUnoTwoMatch, partidaSieteDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaOchoTwoMatch.setVisibility(View.VISIBLE);
@@ -412,8 +412,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaOchoUnoTwoMatch, partidaOchoDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaOchoUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaOchoDosTwoMatch);
                             setFreezeRonda(partidaOchoUnoTwoMatch, partidaOchoDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaNueveTwoMatch.setVisibility(View.VISIBLE);
@@ -427,8 +427,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaNueveUnoTwoMatch, partidaNueveDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaNueveUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaNueveDosTwoMatch);
                             setFreezeRonda(partidaNueveUnoTwoMatch, partidaNueveDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDiezTwoMatch.setVisibility(View.VISIBLE);
@@ -442,8 +442,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaDiezUnoTwoMatch, partidaDiezDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDiezUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDiezDosTwoMatch);
                             setFreezeRonda(partidaDiezUnoTwoMatch, partidaDiezDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaOnceTwoMatch.setVisibility(View.VISIBLE);
@@ -457,8 +457,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaOnceUnoTwoMatch, partidaOnceDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaOnceUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaOnceDosTwoMatch);
                             setFreezeRonda(partidaOnceUnoTwoMatch, partidaOnceDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDoceTwoMatch.setVisibility(View.VISIBLE);
@@ -472,8 +472,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaDoceUnoTwoMatch, partidaDoceDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDoceUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDoceDosTwoMatch);
                             setFreezeRonda(partidaDoceUnoTwoMatch, partidaDoceDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaTreceTwoMatch.setVisibility(View.VISIBLE);
@@ -487,8 +487,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaTreceUnoTwoMatch, partidaTreceDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTreceUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTreceDosTwoMatch);
                             setFreezeRonda(partidaTreceUnoTwoMatch, partidaTreceDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaCatorceTwoMatch.setVisibility(View.VISIBLE);
@@ -502,8 +502,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaCatorceUnoTwoMatch, partidaCatorceDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaCatorceUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaCatorceDosTwoMatch);
                             setFreezeRonda(partidaCatorceUnoTwoMatch, partidaCatorceDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaQuinceTwoMatch.setVisibility(View.VISIBLE);
@@ -517,8 +517,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaQuinceUnoTwoMatch, partidaQuinceDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaQuinceUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaQuinceDosTwoMatch);
                             setFreezeRonda(partidaQuinceUnoTwoMatch, partidaQuinceDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDieciSeisTwoMatch.setVisibility(View.VISIBLE);
@@ -532,8 +532,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaDieciSeisUnoTwoMatch, partidaDieciSeisDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciSeisUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciSeisDosTwoMatch);
                             setFreezeRonda(partidaDieciSeisUnoTwoMatch, partidaDieciSeisDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDieciSieteTwoMatch.setVisibility(View.VISIBLE);
@@ -547,8 +547,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaDieciSieteUnoTwoMatch, partidaDieciSieteDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciSieteUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciSieteDosTwoMatch);
                             setFreezeRonda(partidaDieciSieteUnoTwoMatch, partidaDieciSieteDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDieciOchoTwoMatch.setVisibility(View.VISIBLE);
@@ -562,8 +562,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaDieciOchoUnoTwoMatch, partidaDieciOchoDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciOchoUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciOchoDosTwoMatch);
                             setFreezeRonda(partidaDieciOchoUnoTwoMatch, partidaDieciOchoDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaDieciNueveTwoMatch.setVisibility(View.VISIBLE);
@@ -577,8 +577,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaDieciNueveUnoTwoMatch, partidaDieciNueveDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDieciNueveUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDieciNueveDosTwoMatch);
                             setFreezeRonda(partidaDieciNueveUnoTwoMatch, partidaDieciNueveDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeinteTwoMatch.setVisibility(View.VISIBLE);
@@ -592,21 +592,23 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeinteUnoTwoMatch, partidaVeinteDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeinteUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeinteDosTwoMatch);
                             setFreezeRonda(partidaVeinteUnoTwoMatch, partidaVeinteDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintiunoTwoMatch.setVisibility(View.VISIBLE);
                             actualizarPuntajes();
                             checkLimitePuntos();
                             checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintiunoUnoTwoMatch, partidaVeintiunoDosTwoMatch);
                         }
                         break;
                     case 21:
                         if (checkEmptyNumbers(partidaVeintiunoUnoTwoMatch, partidaVeintiunoDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintiunoUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintiunoDosTwoMatch);
                             setFreezeRonda(partidaVeintiunoUnoTwoMatch, partidaVeintiunoDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeintidosTwoMatch.setVisibility(View.VISIBLE);
@@ -620,8 +622,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeintidosUnoTwoMatch, partidaVeintidosDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintidosUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintidosDosTwoMatch);
                             setFreezeRonda(partidaVeintidosUnoTwoMatch, partidaVeintidosDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeintitresTwoMatch.setVisibility(View.VISIBLE);
@@ -635,8 +637,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeintitresUnoTwoMatch, partidaVeintitresDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintitresUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintitresDosTwoMatch);
                             setFreezeRonda(partidaVeintitresUnoTwoMatch, partidaVeintitresDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeinticuatroTwoMatch.setVisibility(View.VISIBLE);
@@ -650,8 +652,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeinticuatroUnoTwoMatch, partidaVeinticuatroDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeinticuatroUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeinticuatroDosTwoMatch);
                             setFreezeRonda(partidaVeinticuatroUnoTwoMatch, partidaVeinticuatroDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeinticincoTwoMatch.setVisibility(View.VISIBLE);
@@ -665,8 +667,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeinticincoUnoTwoMatch, partidaVeinticincoDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeinticincoUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeinticincoDosTwoMatch);
                             setFreezeRonda(partidaVeinticincoUnoTwoMatch, partidaVeinticincoDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeintiseisTwoMatch.setVisibility(View.VISIBLE);
@@ -680,8 +682,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeintiseisUnoTwoMatch, partidaVeintiseisDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintiseisUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintiseisDosTwoMatch);
                             setFreezeRonda(partidaVeintiseisUnoTwoMatch, partidaVeintiseisDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeintisieteTwoMatch.setVisibility(View.VISIBLE);
@@ -695,8 +697,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeintisieteUnoTwoMatch, partidaVeintisieteDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintisieteUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintisieteDosTwoMatch);
                             setFreezeRonda(partidaVeintisieteUnoTwoMatch, partidaVeintisieteDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeintiochoTwoMatch.setVisibility(View.VISIBLE);
@@ -710,8 +712,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeintiochoUnoTwoMatch, partidaVeintiochoDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintiochoUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintiochoDosTwoMatch);
                             setFreezeRonda(partidaVeintiochoUnoTwoMatch, partidaVeintiochoDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaVeintinueveTwoMatch.setVisibility(View.VISIBLE);
@@ -725,8 +727,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaVeintinueveUnoTwoMatch, partidaVeintinueveDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintinueveUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintinueveDosTwoMatch);
                             setFreezeRonda(partidaVeintinueveUnoTwoMatch, partidaVeintinueveDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             rondaTreintaTwoMatch.setVisibility(View.VISIBLE);
@@ -740,8 +742,8 @@ public class TwoMatchFragment extends Fragment {
                         if (checkEmptyNumbers(partidaTreintaUnoTwoMatch, partidaTreintaDosTwoMatch)) {
                             Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
                         } else {
-                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaDosUnoTwoMatch);
-                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaDosDosTwoMatch);
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTreintaUnoTwoMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTreintaDosTwoMatch);
                             setFreezeRonda(partidaTreintaUnoTwoMatch, partidaTreintaDosTwoMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             actualizarPuntajes();

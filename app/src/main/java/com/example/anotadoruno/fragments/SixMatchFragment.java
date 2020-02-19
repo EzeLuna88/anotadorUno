@@ -81,6 +81,27 @@ public class SixMatchFragment extends Fragment {
     LinearLayout rondaDieciNueveSixMatch;
     @BindView(R.id.rondaVeinteSixMatch)
     LinearLayout rondaVeinteSixMatch;
+    @BindView(R.id.rondaVeintiunoSixMatch)
+    LinearLayout rondaVeintiunoSixMatch;
+    @BindView(R.id.rondaVeintidosSixMatch)
+    LinearLayout rondaVeintidosSixMatch;
+    @BindView(R.id.rondaVeintitresSixMatch)
+    LinearLayout rondaVeintitresSixMatch;
+    @BindView(R.id.rondaVeinticuatroSixMatch)
+    LinearLayout rondaVeinticuatroSixMatch;
+    @BindView(R.id.rondaVeinticincoSixMatch)
+    LinearLayout rondaVeinticincoSixMatch;
+    @BindView(R.id.rondaVeintiseisSixMatch)
+    LinearLayout rondaVeintiseisSixMatch;
+    @BindView(R.id.rondaVeintisieteSixMatch)
+    LinearLayout rondaVeintisieteSixMatch;
+    @BindView(R.id.rondaVeintiochoSixMatch)
+    LinearLayout rondaVeintiochoSixMatch;
+    @BindView(R.id.rondaVeintinueveSixMatch)
+    LinearLayout rondaVeintinueveSixMatch;
+    @BindView(R.id.rondaTreintaSixMatch)
+    LinearLayout rondaTreintaSixMatch;
+
 
     @BindView(R.id.partidaUnoUnoSixMatch)
     EditText partidaUnoUnoSixMatch;
@@ -341,6 +362,136 @@ public class SixMatchFragment extends Fragment {
     EditText partidaVeinteCincoSixMatch;
     @BindView(R.id.partidaVeinteSeisSixMatch)
     EditText partidaVeinteSeisSixMatch;
+
+    @BindView(R.id.partidaVeintiunoUnoSixMatch)
+    EditText partidaVeintiunoUnoSixMatch;
+    @BindView(R.id.partidaVeintiunoDosSixMatch)
+    EditText partidaVeintiunoDosSixMatch;
+    @BindView(R.id.partidaVeintiunoTresSixMatch)
+    EditText partidaVeintiunoTresSixMatch;
+    @BindView(R.id.partidaVeintiunoCuatroSixMatch)
+    EditText partidaVeintiunoCuatroSixMatch;
+    @BindView(R.id.partidaVeintiunoCincoSixMatch)
+    EditText partidaVeintiunoCincoSixMatch;
+    @BindView(R.id.partidaVeintiunoSeisSixMatch)
+    EditText partidaVeintiunoSeisSixMatch;
+
+    @BindView(R.id.partidaVeintidosUnoSixMatch)
+    EditText partidaVeintidosUnoSixMatch;
+    @BindView(R.id.partidaVeintidosDosSixMatch)
+    EditText partidaVeintidosDosSixMatch;
+    @BindView(R.id.partidaVeintidosTresSixMatch)
+    EditText partidaVeintidosTresSixMatch;
+    @BindView(R.id.partidaVeintidosCuatroSixMatch)
+    EditText partidaVeintidosCuatroSixMatch;
+    @BindView(R.id.partidaVeintidosCincoSixMatch)
+    EditText partidaVeintidosCincoSixMatch;
+    @BindView(R.id.partidaVeintidosSeisSixMatch)
+    EditText partidaVeintidosSeisSixMatch;
+
+    @BindView(R.id.partidaVeintitresUnoSixMatch)
+    EditText partidaVeintitresUnoSixMatch;
+    @BindView(R.id.partidaVeintitresDosSixMatch)
+    EditText partidaVeintitresDosSixMatch;
+    @BindView(R.id.partidaVeintitresTresSixMatch)
+    EditText partidaVeintitresTresSixMatch;
+    @BindView(R.id.partidaVeintitresCuatroSixMatch)
+    EditText partidaVeintitresCuatroSixMatch;
+    @BindView(R.id.partidaVeintitresCincoSixMatch)
+    EditText partidaVeintitresCincoSixMatch;
+    @BindView(R.id.partidaVeintitresSeisSixMatch)
+    EditText partidaVeintitresSeisSixMatch;
+
+    @BindView(R.id.partidaVeinticuatroUnoSixMatch)
+    EditText partidaVeinticuatroUnoSixMatch;
+    @BindView(R.id.partidaVeinticuatroDosSixMatch)
+    EditText partidaVeinticuatroDosSixMatch;
+    @BindView(R.id.partidaVeinticuatroTresSixMatch)
+    EditText partidaVeinticuatroTresSixMatch;
+    @BindView(R.id.partidaVeinticuatroCuatroSixMatch)
+    EditText partidaVeinticuatroCuatroSixMatch;
+    @BindView(R.id.partidaVeinticuatroCincoSixMatch)
+    EditText partidaVeinticuatroCincoSixMatch;
+    @BindView(R.id.partidaVeinticuatroSeisSixMatch)
+    EditText partidaVeinticuatroSeisSixMatch;
+
+    @BindView(R.id.partidaVeinticincoUnoSixMatch)
+    EditText partidaVeinticincoUnoSixMatch;
+    @BindView(R.id.partidaVeinticincoDosSixMatch)
+    EditText partidaVeinticincoDosSixMatch;
+    @BindView(R.id.partidaVeinticincoTresSixMatch)
+    EditText partidaVeinticincoTresSixMatch;
+    @BindView(R.id.partidaVeinticincoCuatroSixMatch)
+    EditText partidaVeinticincoCuatroSixMatch;
+    @BindView(R.id.partidaVeinticincoCincoSixMatch)
+    EditText partidaVeinticincoCincoSixMatch;
+    @BindView(R.id.partidaVeinticincoSeisSixMatch)
+    EditText partidaVeinticincoSeisSixMatch;
+
+    @BindView(R.id.partidaVeintiseisUnoSixMatch)
+    EditText partidaVeintiseisUnoSixMatch;
+    @BindView(R.id.partidaVeintiseisDosSixMatch)
+    EditText partidaVeintiseisDosSixMatch;
+    @BindView(R.id.partidaVeintiseisTresSixMatch)
+    EditText partidaVeintiseisTresSixMatch;
+    @BindView(R.id.partidaVeintiseisCuatroSixMatch)
+    EditText partidaVeintiseisCuatroSixMatch;
+    @BindView(R.id.partidaVeintiseisCincoSixMatch)
+    EditText partidaVeintiseisCincoSixMatch;
+    @BindView(R.id.partidaVeintiseisSeisSixMatch)
+    EditText partidaVeintiseisSeisSixMatch;
+
+    @BindView(R.id.partidaVeintisieteUnoSixMatch)
+    EditText partidaVeintisieteUnoSixMatch;
+    @BindView(R.id.partidaVeintisieteDosSixMatch)
+    EditText partidaVeintisieteDosSixMatch;
+    @BindView(R.id.partidaVeintisieteTresSixMatch)
+    EditText partidaVeintisieteTresSixMatch;
+    @BindView(R.id.partidaVeintisieteCuatroSixMatch)
+    EditText partidaVeintisieteCuatroSixMatch;
+    @BindView(R.id.partidaVeintisieteCincoSixMatch)
+    EditText partidaVeintisieteCincoSixMatch;
+    @BindView(R.id.partidaVeintisieteSeisSixMatch)
+    EditText partidaVeintisieteSeisSixMatch;
+
+    @BindView(R.id.partidaVeintiochoUnoSixMatch)
+    EditText partidaVeintiochoUnoSixMatch;
+    @BindView(R.id.partidaVeintiochoDosSixMatch)
+    EditText partidaVeintiochoDosSixMatch;
+    @BindView(R.id.partidaVeintiochoTresSixMatch)
+    EditText partidaVeintiochoTresSixMatch;
+    @BindView(R.id.partidaVeintiochoCuatroSixMatch)
+    EditText partidaVeintiochoCuatroSixMatch;
+    @BindView(R.id.partidaVeintiochoCincoSixMatch)
+    EditText partidaVeintiochoCincoSixMatch;
+    @BindView(R.id.partidaVeintiochoSeisSixMatch)
+    EditText partidaVeintiochoSeisSixMatch;
+
+    @BindView(R.id.partidaVeintinueveUnoSixMatch)
+    EditText partidaVeintinueveUnoSixMatch;
+    @BindView(R.id.partidaVeintinueveDosSixMatch)
+    EditText partidaVeintinueveDosSixMatch;
+    @BindView(R.id.partidaVeintinueveTresSixMatch)
+    EditText partidaVeintinueveTresSixMatch;
+    @BindView(R.id.partidaVeintinueveCuatroSixMatch)
+    EditText partidaVeintinueveCuatroSixMatch;
+    @BindView(R.id.partidaVeintinueveCincoSixMatch)
+    EditText partidaVeintinueveCincoSixMatch;
+    @BindView(R.id.partidaVeintinueveSeisSixMatch)
+    EditText partidaVeintinueveSeisSixMatch;
+
+    @BindView(R.id.partidaTreintaUnoSixMatch)
+    EditText partidaTreintaUnoSixMatch;
+    @BindView(R.id.partidaTreintaDosSixMatch)
+    EditText partidaTreintaDosSixMatch;
+    @BindView(R.id.partidaTreintaTresSixMatch)
+    EditText partidaTreintaTresSixMatch;
+    @BindView(R.id.partidaTreintaCuatroSixMatch)
+    EditText partidaTreintaCuatroSixMatch;
+    @BindView(R.id.partidaTreintaCincoSixMatch)
+    EditText partidaTreintaCincoSixMatch;
+    @BindView(R.id.partidaTreintaSeisSixMatch)
+    EditText partidaTreintaSeisSixMatch;
 
     @BindView(R.id.buttonSiguienteRondaSixMatch)
     Button buttonSiguienteRondaSixMatch;
@@ -914,6 +1065,260 @@ public class SixMatchFragment extends Fragment {
                             setFreezeRonda(partidaVeinteUnoSixMatch, partidaVeinteDosSixMatch,
                                     partidaVeinteTresSixMatch, partidaVeinteCuatroSixMatch,
                                     partidaVeinteCincoSixMatch, partidaVeinteSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintiunoSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintiunoUnoSixMatch, partidaVeintiunoDosSixMatch,
+                                    partidaVeintiunoTresSixMatch, partidaVeintiunoCuatroSixMatch, partidaVeintiunoCincoSixMatch,
+                                    partidaVeintiunoSeisSixMatch);
+                        }
+                        break;
+                    case 21:
+                        if (checkEmptyNumbers(partidaVeintiunoUnoSixMatch, partidaVeintiunoDosSixMatch,
+                                partidaVeintiunoTresSixMatch,
+                                partidaVeintiunoCuatroSixMatch, partidaVeintiunoCincoSixMatch,
+                                partidaVeintiunoSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintiunoUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintiunoDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintiunoTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintiunoCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintiunoCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintiunoSeisSixMatch);
+                            setFreezeRonda(partidaVeintiunoUnoSixMatch, partidaVeintiunoDosSixMatch,
+                                    partidaVeintiunoTresSixMatch,
+                                    partidaVeintiunoCuatroSixMatch, partidaVeintiunoCincoSixMatch,
+                                    partidaVeintiunoSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintidosSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintidosUnoSixMatch, partidaVeintidosDosSixMatch,
+                                    partidaVeintidosTresSixMatch, partidaVeintidosCuatroSixMatch, partidaVeintidosCincoSixMatch,
+                                    partidaVeintidosSeisSixMatch);
+                        }
+                        break;
+                    case 22:
+                        if (checkEmptyNumbers(partidaVeintidosUnoSixMatch, partidaVeintidosDosSixMatch,
+                                partidaVeintidosTresSixMatch, partidaVeintidosCuatroSixMatch, partidaVeintidosCincoSixMatch,
+                                partidaVeintidosSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintidosUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintidosDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintidosTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintidosCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintidosCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintidosSeisSixMatch);
+                            setFreezeRonda(partidaVeintidosUnoSixMatch, partidaVeintidosDosSixMatch,
+                                    partidaVeintidosTresSixMatch,
+                                    partidaVeintidosCuatroSixMatch, partidaVeintidosCincoSixMatch,
+                                    partidaVeintidosSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintitresSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintitresUnoSixMatch, partidaVeintitresDosSixMatch,
+                                    partidaVeintitresTresSixMatch, partidaVeintitresCuatroSixMatch, partidaVeintitresCincoSixMatch,
+                                    partidaVeintitresSeisSixMatch);
+                        }
+                        break;
+                    case 23:
+                        if (checkEmptyNumbers(partidaVeintitresUnoSixMatch, partidaVeintitresDosSixMatch,
+                                partidaVeintitresTresSixMatch, partidaVeintitresCuatroSixMatch, partidaVeintitresCincoSixMatch,
+                                partidaVeintitresSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintitresUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintitresDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintitresTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintitresCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintitresCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintitresSeisSixMatch);
+                            setFreezeRonda(partidaVeintitresUnoSixMatch, partidaVeintitresDosSixMatch,
+                                    partidaVeintitresTresSixMatch,
+                                    partidaVeintitresCuatroSixMatch, partidaVeintitresCincoSixMatch,
+                                    partidaVeintitresSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeinticuatroSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeinticuatroUnoSixMatch, partidaVeinticuatroDosSixMatch,
+                                    partidaVeinticuatroTresSixMatch, partidaVeinticuatroCuatroSixMatch,
+                                    partidaVeinticuatroCincoSixMatch, partidaVeinticuatroSeisSixMatch);
+                        }
+                        break;
+                    case 24:
+                        if (checkEmptyNumbers(partidaVeinticuatroUnoSixMatch, partidaVeinticuatroDosSixMatch,
+                                partidaVeinticuatroTresSixMatch, partidaVeinticuatroCuatroSixMatch,
+                                partidaVeinticuatroCincoSixMatch, partidaVeinticuatroSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeinticuatroUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeinticuatroDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeinticuatroTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeinticuatroCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeinticuatroCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeinticuatroSeisSixMatch);
+                            setFreezeRonda(partidaVeinticuatroUnoSixMatch, partidaVeinticuatroDosSixMatch,
+                                    partidaVeinticuatroTresSixMatch, partidaVeinticuatroCuatroSixMatch,
+                                    partidaVeinticuatroCincoSixMatch, partidaVeinticuatroSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeinticincoSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeinticincoUnoSixMatch, partidaVeinticincoDosSixMatch,
+                                    partidaVeinticincoTresSixMatch, partidaVeinticincoCuatroSixMatch,
+                                    partidaVeinticincoCincoSixMatch, partidaVeinticincoSeisSixMatch);
+                        }
+                        break;
+                    case 25:
+                        if (checkEmptyNumbers(partidaVeinticincoUnoSixMatch, partidaVeinticincoDosSixMatch,
+                                partidaVeinticincoTresSixMatch, partidaVeinticincoCuatroSixMatch,
+                                partidaVeinticincoCincoSixMatch, partidaVeinticincoSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeinticincoUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeinticincoDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeinticincoTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeinticincoCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeinticincoCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeinticincoSeisSixMatch);
+                            setFreezeRonda(partidaVeinticincoUnoSixMatch, partidaVeinticincoDosSixMatch,
+                                    partidaVeinticincoTresSixMatch, partidaVeinticincoCuatroSixMatch,
+                                    partidaVeinticincoCincoSixMatch, partidaVeinticincoSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintiseisSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintiseisUnoSixMatch, partidaVeintiseisDosSixMatch,
+                                    partidaVeintiseisTresSixMatch, partidaVeintiseisCuatroSixMatch,
+                                    partidaVeintiseisCincoSixMatch, partidaVeintiseisSeisSixMatch);
+                        }
+                        break;
+                    case 26:
+                        if (checkEmptyNumbers(partidaVeintiseisUnoSixMatch, partidaVeintiseisDosSixMatch,
+                                partidaVeintiseisTresSixMatch, partidaVeintiseisCuatroSixMatch,
+                                partidaVeintiseisCincoSixMatch, partidaVeintiseisSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintiseisUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintiseisDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintiseisTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintiseisCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintiseisCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintiseisSeisSixMatch);
+                            setFreezeRonda(partidaVeintiseisUnoSixMatch, partidaVeintiseisDosSixMatch,
+                                    partidaVeintiseisTresSixMatch, partidaVeintiseisCuatroSixMatch,
+                                    partidaVeintiseisCincoSixMatch, partidaVeintiseisSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintisieteSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintisieteUnoSixMatch, partidaVeintisieteDosSixMatch,
+                                    partidaVeintisieteTresSixMatch, partidaVeintisieteCuatroSixMatch,
+                                    partidaVeintisieteCincoSixMatch, partidaVeintisieteSeisSixMatch);
+                        }
+                        break;
+                    case 27:
+                        if (checkEmptyNumbers(partidaVeintisieteUnoSixMatch, partidaVeintisieteDosSixMatch,
+                                partidaVeintisieteTresSixMatch, partidaVeintisieteCuatroSixMatch,
+                                partidaVeintisieteCincoSixMatch, partidaVeintisieteSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintisieteUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintisieteDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintisieteTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintisieteCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintisieteCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintisieteSeisSixMatch);
+                            setFreezeRonda(partidaVeintisieteUnoSixMatch, partidaVeintisieteDosSixMatch,
+                                    partidaVeintisieteTresSixMatch, partidaVeintisieteCuatroSixMatch,
+                                    partidaVeintisieteCincoSixMatch, partidaVeintisieteSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintiochoSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintiochoUnoSixMatch, partidaVeintiochoDosSixMatch,
+                                    partidaVeintiochoTresSixMatch, partidaVeintiochoCuatroSixMatch,
+                                    partidaVeintiochoCincoSixMatch, partidaVeintiochoSeisSixMatch);
+                        }
+                        break;
+                    case 28:
+                        if (checkEmptyNumbers(partidaVeintiochoUnoSixMatch, partidaVeintiochoDosSixMatch,
+                                partidaVeintiochoTresSixMatch, partidaVeintiochoCuatroSixMatch,
+                                partidaVeintiochoCincoSixMatch, partidaVeintiochoSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintiochoUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintiochoDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintiochoTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintiochoCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintiochoCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintiochoSeisSixMatch);
+                            setFreezeRonda(partidaVeintiochoUnoSixMatch, partidaVeintiochoDosSixMatch,
+                                    partidaVeintiochoTresSixMatch, partidaVeintiochoCuatroSixMatch,
+                                    partidaVeintiochoCincoSixMatch, partidaVeintiochoSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaVeintinueveSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaVeintinueveUnoSixMatch, partidaVeintinueveDosSixMatch,
+                                    partidaVeintinueveTresSixMatch, partidaVeintinueveCuatroSixMatch,
+                                    partidaVeintinueveCincoSixMatch, partidaVeintinueveSeisSixMatch);
+                        }
+                        break;
+                    case 29:
+                        if (checkEmptyNumbers(partidaVeintinueveUnoSixMatch, partidaVeintinueveDosSixMatch,
+                                partidaVeintinueveTresSixMatch, partidaVeintinueveCuatroSixMatch,
+                                partidaVeintinueveCincoSixMatch, partidaVeintinueveSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaVeintinueveUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaVeintinueveDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaVeintinueveTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaVeintinueveCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaVeintinueveCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaVeintinueveSeisSixMatch);
+                            setFreezeRonda(partidaVeintinueveUnoSixMatch, partidaVeintinueveDosSixMatch,
+                                    partidaVeintinueveTresSixMatch, partidaVeintinueveCuatroSixMatch,
+                                    partidaVeintinueveCincoSixMatch, partidaVeintinueveSeisSixMatch);
+                            contadorDeRonda = contadorDeRonda + 1;
+                            rondaTreintaSixMatch.setVisibility(View.VISIBLE);
+                            actualizarPuntajes();
+                            checkLimitePuntos();
+                            checkWinner();
+                            generalPerdedorNoSumaMas(partidaTreintaUnoSixMatch, partidaTreintaDosSixMatch,
+                                    partidaTreintaTresSixMatch, partidaTreintaCuatroSixMatch,
+                                    partidaTreintaCincoSixMatch, partidaTreintaSeisSixMatch);
+                        }
+                        break;
+                    case 30:
+                        if (checkEmptyNumbers(partidaTreintaUnoSixMatch, partidaTreintaDosSixMatch,
+                                partidaTreintaTresSixMatch, partidaTreintaCuatroSixMatch,
+                                partidaTreintaCincoSixMatch, partidaTreintaSeisSixMatch)) {
+                            Toast.makeText(getContext(), R.string.llenar_todos_los_casilleros, Toast.LENGTH_SHORT).show();
+                        } else {
+                            puntajeJugadorUno = puntajeJugadorUno + getNumeroParcial(partidaTreintaUnoSixMatch);
+                            puntajeJugadorDos = puntajeJugadorDos + getNumeroParcial(partidaTreintaDosSixMatch);
+                            puntajeJugadorTres = puntajeJugadorTres + getNumeroParcial(partidaTreintaTresSixMatch);
+                            puntajeJugadorCuatro = puntajeJugadorCuatro + getNumeroParcial(partidaTreintaCuatroSixMatch);
+                            puntajeJugadorCinco = puntajeJugadorCinco + getNumeroParcial(partidaTreintaCincoSixMatch);
+                            puntajeJugadorSeis = puntajeJugadorSeis + getNumeroParcial(partidaTreintaSeisSixMatch);
+                            setFreezeRonda(partidaTreintaUnoSixMatch, partidaTreintaDosSixMatch,
+                                    partidaTreintaTresSixMatch, partidaTreintaCuatroSixMatch,
+                                    partidaTreintaCincoSixMatch, partidaTreintaSeisSixMatch);
                             contadorDeRonda = contadorDeRonda + 1;
                             actualizarPuntajes();
                             checkLimitePuntos();

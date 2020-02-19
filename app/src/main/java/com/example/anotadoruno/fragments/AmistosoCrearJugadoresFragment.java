@@ -277,7 +277,18 @@ public class AmistosoCrearJugadoresFragment extends Fragment {
                         if (limiteDePuntos == null) {
                             Toast.makeText(getContext(), "debe poner un limite de puntos", Toast.LENGTH_SHORT).show();
                         } else {
+                            Bundle args = new Bundle();
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_UNO, nombreJugadorUno);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_DOS, nombreJugadorDos);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_TRES, nombreJugadorTres);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_CUATRO, nombreJugadorCuatro);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_CINCO, nombreJugadorCinco);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_SEIS, nombreJugadorSeis);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_SIETE, nombreJugadorSiete);
+                            args.putSerializable(EightMatchFragment.NOMBRE_JUGADOR_OCHO, nombreJugadorOcho);
+                            args.putSerializable(EightMatchFragment.LIMITE_DE_PUNTOS, limiteDePuntos);
                             EightMatchFragment eightMatchFragment = new EightMatchFragment();
+                            eightMatchFragment.setArguments(args);
                             FragmentManager fragmentManager = getFragmentManager();
                             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                             fragmentTransaction.replace(R.id.contenedorDeFragment, eightMatchFragment).commit();
